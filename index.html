@@ -140,10 +140,30 @@
           <p><a class="btn btn-default" onclick="window.location.href='Hommes.html';" role="button">View details &raquo; </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+         <form method="POST" id="formulaire">
+        <p>Poids <input type="text" name="prix" size="20" onblur="calculIMC()"></p>
+        <p>Taille <input type="text" name="marge" value="1" size="20" onblur="calculIMC()"></p>
+        <p>IMC <input type="text" name="vente" size="20"></p>
+        <p><input type="submit" value="Envoyer" name="B1"></p>
+        </form>
+        < script>
+        function calculIMC()
+        {
+        var poids=parseFloat(document.getElementById("formulaire").elements["Poids"].value);
+        var taille=parseFloat(document.getElementById("formulaire").elements["Taille"].value);
+        if (!isNaN (poids)&& !isNaN(taille))
+        {
+        var IMC= document.getElementById("formulaire").elements["poids"].value / (document.getElementById("formulaire").elements["taille"].value * document.getElementById("formulaire").elements["taille"].value);
+        alert(IMC);
+        document.getElementById("formulaire").elements["IMC"].value=IMC;
+        }else
+        {
+        alert("Vous devez entrer un chiffre, en utilisant le . comme séparateur");
+        }
+        }
+        < /script>
+
+
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">

@@ -68,12 +68,12 @@ body {
     <div class="age">
     <img src="images/anniversaire picto.jpg" width="50"/>
     </div>
-    <div class="checkbox">
-	<label class="checkbox-inline"><input type="checkbox" value="">18-24 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" value="">25-34 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" value="">35-49 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" value="">50-64 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" value="">65 ans et +</label>
+<div class="radio">
+	<label class="radio-inline"><input type="radio" name="optradio">18-24 ans</label>
+	<label class="radio-inline"><input type="radio" name="optradio">25-34 ans</label>
+	<label class="radio-inline"><input type="radio" name="optradio">35-49 ans</label>
+	<label class="radio-inline"><input type="radio" name="optradio">50-64 ans</label>
+	<label class="radio-inline"><input type="radio" name="optradio">65 ans et +</label>
 	</div>
 	</div>
 
@@ -82,7 +82,7 @@ body {
   <h3>Calculez votre IMC</h3>
 
 	 <form method="POST" id="formulaire">
-		 <div class="col-xs-1 bg-1 text-center">
+		 <div class="col-xs-1 text-center center">
 	  	<label for="ex1">Poids</label>
 	  	<input class="form-control" style="color:black;" type="text"  name="Poids" value="60" size="10" onblur="calculIMC()">
 		</div>

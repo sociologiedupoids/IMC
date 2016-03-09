@@ -115,27 +115,45 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
   <h3>Vous êtes prêts? C'est parti !</h3>
   </div>
 
+<?php
+// define variables and set to empty values
+$gender = $age = "";?>
 
   <div class="container-fluid bg-1 text-center">
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
     <h3>Etes-vous :</h3>
     <div class="radio">
-	<img src="images/pic homme.jpg" width="20"><label class="radio-inline"><input type="radio" name="optradio">Un homme?</label>
-	<img src="images/pic femme.jpg" width="20"><label class="radio-inline"><input type="radio" name="optradio">Une femme?</label>
+	<img src="images/pic femme.jpg" width="20"><label class="radio"><input type="radio"  name="genre" <?php if (isset($genre) && $genre=="Une femme?") echo "checked";?>
+value="Femme">Une femme?</label>
+	<img src="images/pic homme.jpg" width="20"><label class="radio"><input type="radio" name="genre" <?php if (isset($genre) && $genre=="Une femme?") echo "checked";?>
+value="Homme">Une femme?</label>
 	</div>
  </div>
 
   <div class="container-fluid bg-1 text-center">
-        <img src="images/anniversaire picto.jpg" width="50"/> <h3>Votre âge : </h3>
+        <img src="images/anniversaire picto.jpg" width="20"/> <h3>Votre âge : </h3>
 <div class="radio">
-	<label class="radio-inline"><input type="radio" name="optradio">18-24 ans</label>
-	<label class="radio-inline"><input type="radio" name="optradio">25-34 ans</label>
-	<label class="radio-inline"><input type="radio" name="optradio">35-49 ans</label>
-	<label class="radio-inline"><input type="radio" name="optradio">50-64 ans</label>
-	<label class="radio-inline"><input type="radio" name="optradio">65 ans et +</label>
+	<label class="radio-inline"><input type="radio" name="age" <?php if (isset($age) && $age=="18-24 ans") echo "checked";?>
+	value="18-24 ans">18-24 ans</label>
+	<label class="radio-inline"><input type="radio" name="age" <?php if (isset($age) && $age=="25-34 ans") echo "checked";?>
+	value="25-34 ans">25-34 ans</label>
+	<label class="radio-inline"><input type="radio" name="age" <?php if (isset($age) && $age=="35-49 ans") echo "checked";?>
+	value="35-49 ans">35-49 ans</label>
+	<label class="radio-inline"><input type="radio" name="age" <?php if (isset($age) && $age=="50-64 ans") echo "checked";?>
+	value="50-64 ans">50-64 ans</label>
+	<label class="radio-inline"><input type="radio" name="age" <?php if (isset($age) && $age=="65 ans et +") echo "checked";?>
+	value="65 ans et +">65 ans et +</label>
 	</div>
 	</div>
+   <input type="submit" name="submit" value="Submit"> 
+</form>
 
-  
+  <?php
+echo "<h2>Your Input:</h2>";
+echo $age;
+echo "<br>";
+echo $genre;
+?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

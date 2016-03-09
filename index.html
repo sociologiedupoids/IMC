@@ -33,16 +33,18 @@
 <!-- NAVBAR
 
 ================================================== -->
-  <body>
- 
-      <!-- ESSAI QUESTIONS -->
-
-      <style>
-.bg-1 { 
+     <style>
+.body{ 
     background-color: #046380; /* Bleu canaaard */
     color: #ffffff;
 }
 </style>
+
+  <body>
+ 
+      <!-- ESSAI QUESTIONS -->
+
+ 
 
   <div class="container-fluid bg-1 text-center">
  <h1>Projet Dataviz</h1>
@@ -66,10 +68,10 @@
   <div class="container-fluid bg-1 text-center">
   <h3>Calculez votre IMC</h3>
 
-	 <form method="POST" id="formulaire">
-        <p>Poids <input type="text" style="color:black;" name="Poids" value="60" size="10" onblur="calculIMC()"></p>
-        <p>Taille <input type="text" style="color:black;" name="Taille" value="1.70" size="10" onblur="calculIMC()"></p>
-        <p>IMC <input type="text" style="color:black;" name="IMC" size="10"></p>
+	 <form method="POST" id="formulaire" style="color:black;">
+        <p>Poids <input type="text"  name="Poids" value="60" size="10" onblur="calculIMC()"></p>
+        <p>Taille <input type="text" name="Taille" value="1.70" size="10" onblur="calculIMC()"></p>
+        <p>IMC <input type="text" name="IMC" size="10"></p>
         <p><input type="submit" value="Envoyer" name="B1"></p>
         </form>
         <script>
@@ -88,7 +90,7 @@
         }
         }
         </script>
-
+    </div>
 
   
 
@@ -103,6 +105,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-    </div>
+
   </body>
 </html>

@@ -168,60 +168,56 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <iframe width="450" height="450" src="//embed.chartblocks.com/1.0/?c=56d1d3799973d27056bf287a&t=cf242a21776b7f2" frameBorder="0"></iframe>      
-        </div>
-      </div>
+        
        
-      <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto">
-        <script type="text/JavaScript">
-            $(function () {
-              $('#container').highcharts({
-                chart: {
-                type: 'bar'
-              },
-                title: {
-                text: 'Sport et cigarettes'
-              },
-                xAxis: {
-                categories: ['Fumeur', 'Non Fumeur']
-              },
-                yAxis: {
-                min: 0,
-                max : 100,
-                title: {
-                text: 'Pourcentage de sportifs'
-                }
-              },
-                legend: {
-                reversed: true
+        <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto">
+          <script type="text/JavaScript">
+              $(function () {
+                $('#container').highcharts({
+                  chart: {
+                  type: 'bar'
                 },
-                plotOptions: {
-                series: {
-                stacking: 'normal'
-                }
-              },
-                series: [{
-                name: 'Très vaillants (+10h)',
-                data: [7, 7]
-              }, {
-                name: 'Vaillants (entre 5 et 10h)',
-                data: [4, 6]
-              },{
-                name : 'Sportifs (2 à 5h)',
-                data: [11,13]
-              },{
-                name : 'de 0 à 2h',
-                data : [17,22]
-              },{
-              name : 'Inactifs',
-              data : [61,52]
-              }]
-             });
-            });  
-          </script>
-       </div>
+                  title: {
+                  text: 'Sport et cigarettes'
+                },
+                  xAxis: {
+                  categories: ['Fumeur', 'Non Fumeur']
+                },
+                  yAxis: {
+                  min: 0,
+                  max : 100,
+                  title: {
+                  text: 'Pourcentage de sportifs'
+                  }
+                },
+                  legend: {
+                  reversed: true
+                  },
+                  plotOptions: {
+                  series: {
+                  stacking: 'normal'
+                  }
+                },
+                  series: [{
+                  name: 'Très vaillants (+10h)',
+                  data: [7, 7]
+                }, {
+                  name: 'Vaillants (entre 5 et 10h)',
+                  data: [4, 6]
+                },{
+                  name : 'Sportifs (2 à 5h)',
+                  data: [11,13]
+                },{
+                  name : 'de 0 à 2h',
+                  data : [17,22]
+                },{
+                name : 'Inactifs',
+                data : [61,52]
+                }]
+               });
+              });  
+            </script>
+         </div>
 
       <hr class="featurette-divider">
 

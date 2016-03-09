@@ -57,9 +57,11 @@ body {
     <h3>Etes-vous :</h3>
     <div id="choix1">
             <a href="Homme.html"/><img src="images/pic homme.jpg" width="50"></a>
-            <id="choix2">
+    </div>
+    <div id="choix2">
             <a href="Femme.html"/><img src="images/pic femme.jpg" width="50"></a>
-        </div>
+    </div>
+   </div>
 
 
   <div class="container-fluid bg-1 text-center">
@@ -67,14 +69,22 @@ body {
     <div class="age">
     <img src="images/anniversaire picto.jpg" width="50"/>
     </div>
+    <div class="checkbox">
+		<label class="checkbox-inline"><input type="checkbox" value="">18-25 ans</label>
+		<label class="checkbox-inline"><input type="checkbox" value="">25 - </label>
+		<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+		<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+		<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+	</div>
+	</div>
 
   <div class="container-fluid bg-1 text-center">
   <h3>Calculez votre IMC</h3>
 
-	 <form method="POST" id="formulaire" style="color:black;">
-        <p>Poids <input type="text"  name="Poids" value="60" size="10" onblur="calculIMC()"></p>
-        <p>Taille <input type="text" name="Taille" value="1.70" size="10" onblur="calculIMC()"></p>
-        <p>IMC <input type="text" name="IMC" size="10"></p>
+	 <form method="POST" id="formulaire">
+        <p>Poids <input style="color:black;" type="text"  name="Poids" value="60" size="10" onblur="calculIMC()"></p>
+        <p>Taille <input style="color:black;" type="text" name="Taille" value="1.70" size="10" onblur="calculIMC()"></p>
+        <p>IMC <input style="color:black;" type="text" name="IMC" size="10"></p>
         </form>
         <script>
         function calculIMC()

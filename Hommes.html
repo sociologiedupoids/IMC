@@ -171,6 +171,90 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <script type="text/javascript">
+
+                  var data = {'Fu':[{
+                    name: ''Très vaillants (+10h)',
+                    data: [1,1,1,1]
+                  }, {
+                    name: 'Blessés hospitalisés',
+                    data: [17,15,1,7,6]
+                  }, {
+                    name: 'Blessés légers',
+                    data: [346,75,27,49,31]
+                  }, {
+                    name: 'Indemnes',
+                    data: [3,2,56,17,0]
+                  }],
+                    'Autres usagers':[{
+                    name: 'Tués',
+                    data: [0,0,1,0,0]
+                  }, {
+                    name: 'Blessés hospitalisés',
+                    data: [0,0,8,1,0]
+                  }, {
+                    name: 'Blessés légers',
+                    data: [6,0,69,36,0]
+                  }, {
+                    name: 'Indemnes',
+                    data: [360,0,6,38,41]
+                  }]};
+
+                  var options = {
+                        chart: {
+                          renderTo: 'container',
+                          type: 'bar',
+                          style:{
+                            "font-family":"\"Trebuchet MS\", helvetica, clean, sans-serif",
+                            fontWeight:'bold'
+                          }
+                        },
+                          colors: ['#824400', '#cc5600', '#df924a', '#44646f'],
+                        title: {
+                          text: ''
+                        },
+                        xAxis: {
+                          categories: ['Vélo + Voiture', 'Vélo seul(s)', 'Vélo + Piéton', 'Vélo + Deux roues', 'Vélo + Poids lourd']
+                        },
+                        yAxis: {
+                          min: 0,
+                          title: {
+                            text: 'Nombre de blessés'
+                          }
+                        },
+                        legend: {
+                          reversed: true
+                        },
+                        plotOptions: {
+                          series: {
+                            stacking: 'normal'
+                          }
+                        },
+                        exporting: {
+                          enabled: false
+                        },
+                        credits: {
+                          enabled: false
+                        },
+                        series: data['Cyclistes']     
+                      };
+
+                  $(document).ready(function () {
+                    
+                      var cdhleads = new Highcharts.Chart(options);
+                    
+                    
+                    $('#chartType').change(function(){
+                      var selected  = this.value;
+                      options.series = data[selected];
+                      chart = $('#container').highcharts(options);
+                    });
+                    
+                    
+                  });
+                       
+                </script>
+
         
        
         <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto">

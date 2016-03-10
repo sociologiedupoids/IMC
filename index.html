@@ -126,6 +126,9 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 
   <div class="container-fluid bg-1 text-center">
   <h3>Votre âge : </h3>
+  <ul>
+    <li> 
+        <a href='#'>18-24 ans</a>
 <div class="checkbox">
 	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A1">18-24 ans</label>
 	<label class="checkbox-inline"><input type="checkbox" name="optradio"id="A2">25-34 ans</label>
@@ -137,6 +140,26 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 	</div>
    
 <button onclick="myFunction()" class="btn btn-primary btn-block">Go !</button>
+   
+
+   <div class="diapo" id="diapo4" style="position:relative;">
+          <div class="inner-diapo">
+                <div class="inner-diapo_centerize">
+                    <h1 class="titre-diapo" id="titre-region">Sélectionnez<br />votre région de travail</h1>
+                    <div class="titre-diapo" id="region-selected">
+                      <span id="theregion">
+                            <span class="theregion_label"></span>
+                            <img src="img/carte de france picto.png" id="close-region" alt="fermer region" />
+                        </span>
+                    </div>
+                    <div id="map-regions">
+                      <img src="img/pin.png" id="thepin" alt="map pin" />
+                    </div>
+                    <!--<a href="#" id="bt-horsfrance"><img src="img/bt-horsfrance.jpg" alt="hors de france" /></a>-->
+                </div>
+                <a href="#" class="bt-valid" style="display:none;"><img src="img/bt-valid.png" alt="bouton validation" /></a>
+            </div>
+        </div>
 
   <script>
 function myFunction() {

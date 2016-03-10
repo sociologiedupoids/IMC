@@ -142,24 +142,20 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 <button onclick="myFunction()" class="btn btn-primary btn-block">Go !</button>
    
 
-   <div class="diapo" id="diapo4" style="position:relative;">
-          <div class="inner-diapo">
-                <div class="inner-diapo_centerize">
-                    <h1 class="titre-diapo" id="titre-region">Sélectionnez<br />votre région de travail</h1>
-                    <div class="titre-diapo" id="region-selected">
-                      <span id="theregion">
-                            <span class="theregion_label"></span>
-                            <img src="img/carte de france picto.png" id="close-region" alt="fermer region" />
-                        </span>
-                    </div>
-                    <div id="map-regions">
-                      <img src="img/pin.png" id="thepin" alt="map pin" />
-                    </div>
-                    <!--<a href="#" id="bt-horsfrance"><img src="img/bt-horsfrance.jpg" alt="hors de france" /></a>-->
-                </div>
-                <a href="#" class="bt-valid" style="display:none;"><img src="img/bt-valid.png" alt="bouton validation" /></a>
-            </div>
-        </div>
+   <div id="help-2" class="help">
+    <div class="unclick_mask"></div>
+    <div class="outer-help">
+        <h3>L'âge est-il discriminant ?</h3>
+        <span>
+            Plus la carrière avance, plus l'écart de salaire augmente (salaire brut annuel moyen en équivalent temps plein). <br /><br />
+            En 2012 une femme gagne 7% de moins qu'un homme entre 21 et 25 ans, mais 36 % de moins entre 61 et 65 ans. <br /><br />
+            Ces écarts s'expliquent par plusieurs facteurs : type de métier exercé, qualification et secteur d'activité, nombre d'heures travaillées sur l'année, interruptions de carrière et expérience professionnelle.<br /><br />
+            <a href="http://www.insee.fr/fr/themes/document.asp?ref_id=irsocdads2012#s3" target="_blank">Source : Insee Résultats, les salaires dans le secteur privé et les entreprises publiques en 2012, N°169 Société - juin 2015</a>
+
+
+            <!--<a href="http://www.insee.fr/fr/themes/detail.asp?ref_id=ir-dads2010&amp;page=irweb/dads2010/dd/dads2010_t20.htm" target="_blank">Source : Insee</a>-->
+        </span>
+      </div>
 
   <script>
 function myFunction() {

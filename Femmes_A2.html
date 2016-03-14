@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Hommes</title>
+    <title>Femmes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,8 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -71,6 +73,53 @@
 
       </div>
     </div>
+
+
+
+            /* Custom CSS */
+              <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: "Répartition des hommes et femmes dans chaque catégorie d'oscar"
+        },
+        xAxis: {
+            categories: [' Meilleur acteur  '  , ' Meilleur film étranger  '  , ' Meilleur mixage de son  '  , ' Meilleur réalisateur  '  , ' Meilleur scénario adapté  '  , ' Meilleur scénario original  '  , ' Meilleur second rôle masculin  '  , ' Meilleure animation  '  , ' Meilleure musique de film  '  , ' Meilleure photographie  '  , ' Meilleurs effets visuels  '  , ' Meilleur montage de son  '  , ' Meilleur film  '  , ' Meilleur court-métrage  '  , ' Meilleur montage  '  , ' Meilleur documentaire  '  , ' Meilleure chanson originale  '  , ' Meilleurs maquillages et coiffures   '  , "Meilleur court-métrage d'animation  "  , ' Meilleur court-métrage documentaire  '  , ' Meilleur décor  '  , ' Meilleure création de costumes  '  , ' Meilleur second rôle féminin  '  , ' Meilleure actrice  '   
+]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Pourcentage'
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name}: {point.y} ({point.percentage:.0f}%)',
+            shared: true
+        },
+        plotOptions: {
+            column: {
+                stacking: 'percent'
+            }
+        }, colors:['#FFD700','#696969'],
+        series: [{
+            name: 'Femmes',
+            data: [ 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 1 , 1 , 1 , 2 , 2 , 2 , 3 , 2 , 6 , 5 , 5 , 5 ]
+        }, {
+            name: 'Hommes',
+            data: [ 5 , 5 , 15 , 5 , 5 , 10 , 5 , 7 , 5 , 6 , 20 , 8 , 7 , 5 , 5 , 5 , 4 , 4 , 5 , 3 , 4 , 1 , 0 , 0 ]
+        }]
+    });
+});
+</script>
 
 
     <!-- Carousel

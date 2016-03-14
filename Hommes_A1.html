@@ -359,17 +359,17 @@
 														fontWeight:'bold'
 													}
 												},
-				     							colors: ['#824400', '#cc5600', '#df924a', '#44646f'],
+				     							colors: ['#824400', '#cc5600', '#df924a', '#44646f','#44646f'],
 												title: {
 													text: ''
 												},
 												xAxis: {
-													categories: ['Vélo + Voiture', 'Vélo seul(s)', 'Vélo + Piéton', 'Vélo + Deux roues', 'Vélo + Poids lourd']
+													categories: ['Inactifs', 'Sportifs du dimanche', 'Sportifs', 'Vaillants', 'Très vaillants']
 												},
 												yAxis: {
 													min: 0,
 													title: {
-														text: 'Nombre de blessés'
+														text: 'Proportion'
 													}
 												},
 												legend: {
@@ -385,9 +385,7 @@
 												},
 												credits: {
 													enabled: false
-												},
-												series: data['Cyclistes']     
-											};
+												};
 
 									$(document).ready(function () {
 										

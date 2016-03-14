@@ -164,9 +164,53 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <iframe width="450" height="450" src="//embed.chartblocks.com/1.0/?c=56d1d3799973d27056bf287a&t=cf242a21776b7f2" frameBorder="0"></iframe>   
-          <iframe width="450" height="450" src="//jsfiddle.net/yoxoeoyu/embed/" frameBorder="0"></iframe> 
-        
+          
+            /* Custom CSS */
+              <script src="http://code.highcharts.com/highcharts.js"></script>
+              <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+          <script type="text/javascript">
+          $(function () {
+          $('#container').highcharts({
+                chart: {
+                      type: 'column'
+                  },
+                title: {
+                text: "Répartition des hommes et femmes dans chaque catégorie d'oscar"
+                  },
+                  xAxis: {
+                  categories: [' Meilleur acteur  '  , ' Meilleur film étranger  '  , ' Meilleur mixage de son  '  , ' Meilleur réalisateur  '  , ' Meilleur scénario adapté  '  , ' Meilleur scénario original  '  , ' Meilleur second rôle masculin  '  , ' Meilleure animation  '  , ' Meilleure musique de film  '  , ' Meilleure photographie  '  , ' Meilleurs effets visuels  '  , ' Meilleur montage de son  '  , ' Meilleur film  '  , ' Meilleur court-métrage  '  , ' Meilleur montage  '  , ' Meilleur documentaire  '  , ' Meilleure chanson originale  '  , ' Meilleurs maquillages et coiffures   '  , "Meilleur court-métrage d'animation  "  , ' Meilleur court-métrage documentaire  '  , ' Meilleur décor  '  , ' Meilleure création de costumes  '  , ' Meilleur second rôle féminin  '  , ' Meilleure actrice  '   
+            ]
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Pourcentage'
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: {point.y} ({point.percentage:.0f}%)',
+                        shared: true
+                    },
+                    plotOptions: {
+                        column: {
+                            stacking: 'percent'
+                        }
+                    }, colors:['#FFD700','#696969'],
+                    series: [{
+                        name: 'Femmes',
+                        data: [ 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 1 , 1 , 1 , 2 , 2 , 2 , 3 , 2 , 6 , 5 , 5 , 5 ]
+                    }, {
+                        name: 'Hommes',
+                        data: [ 5 , 5 , 15 , 5 , 5 , 10 , 5 , 7 , 5 , 6 , 20 , 8 , 7 , 5 , 5 , 5 , 4 , 4 , 5 , 3 , 4 , 1 , 0 , 0 ]
+                    }]
+                });
+            });
+            </script>
+  
+         
         </div>
       </div>
 

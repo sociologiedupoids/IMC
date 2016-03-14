@@ -156,7 +156,7 @@
                   type: 'bar'
                 },
                   title: {
-                  text: 'Sport et cigarettes'
+                  text: "Sport et cigarettes"
                 },
                   xAxis: {
                   categories: ['Fumeur', 'Non Fumeur']
@@ -168,14 +168,18 @@
                   text: 'Pourcentage de sportifs'
                   }
                 },
+                  tooltip: {
+                  	pointFormat : '{series.name}: {point.y}({point.percentage:0f}%)',
+                  	shared: true
+                  },
                   legend: {
                   reversed: true
                   },
                   plotOptions: {
-                  series: {
-                  stacking: 'normal'
+                  columns: {
+                  stacking: 'percent'
                   }
-                },
+                }, colors: ['#FFD700','#696969'],
                   series: [{
                   name: 'Très vaillants (+10h)',
                   data: [7, 7]

@@ -289,6 +289,150 @@
             </script>
          </div>
 
+
+         <--! Essai -->
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Accidentologie cycliste à Paris en 2012</title>
+
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.scrollTo').click( function() { // Au clic sur un élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 900; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					return false;
+				});
+			});
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+
+
+
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+
+ 
+
+		<style type="text/css">a:link{text-decoration:none}</style>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-61746180-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+<body>
+				<select id="chartType">
+								<!-- <option value="0">-select series-</option>     -->               
+								<option value="Cyclistes"> Cyclistes</option>
+								<option value="Autres usagers"> Autres usagers </option>
+							</select>
+										
+
+						<div id="container" style="min-width: 620px; max-width:800px; height: 400px; margin: 0 auto;"  class="ChartBox" >
+									
+						        	<script type="text/javascript">
+
+									var data = {'Cyclistes':[{
+										name: 'Tués',
+										data: [1,0,0,0,2]
+									}, {
+										name: 'Blessés hospitalisés',
+										data: [17,15,1,7,6]
+									}, {
+										name: 'Blessés légers',
+										data: [346,75,27,49,31]
+									}, {
+										name: 'Indemnes',
+										data: [3,2,56,17,0]
+									}],
+										'Autres usagers':[{
+										name: 'Tués',
+										data: [0,0,1,0,0]
+									}, {
+										name: 'Blessés hospitalisés',
+										data: [0,0,8,1,0]
+									}, {
+										name: 'Blessés légers',
+										data: [6,0,69,36,0]
+									}, {
+										name: 'Indemnes',
+										data: [360,0,6,38,41]
+									}]};
+
+									var options = {
+												chart: {
+													renderTo: 'container',
+													type: 'bar',
+													style:{
+														"font-family":"\"Trebuchet MS\", helvetica, clean, sans-serif",
+														fontWeight:'bold'
+													}
+												},
+				     							colors: ['#824400', '#cc5600', '#df924a', '#44646f'],
+												title: {
+													text: ''
+												},
+												xAxis: {
+													categories: ['Vélo + Voiture', 'Vélo seul(s)', 'Vélo + Piéton', 'Vélo + Deux roues', 'Vélo + Poids lourd']
+												},
+												yAxis: {
+													min: 0,
+													title: {
+														text: 'Nombre de blessés'
+													}
+												},
+												legend: {
+													reversed: true
+												},
+												plotOptions: {
+													series: {
+														stacking: 'normal'
+													}
+												},
+												exporting: {
+													enabled: false
+												},
+												credits: {
+													enabled: false
+												},
+												series: data['Cyclistes']     
+											};
+
+									$(document).ready(function () {
+										
+											var cdhleads = new Highcharts.Chart(options);
+										
+										
+										$('#chartType').change(function(){
+											var selected  = this.value;
+											options.series = data[selected];
+											chart = $('#container').highcharts(options);
+										});
+										
+										
+									});
+				               
+									  </script>
+
+								</div>
+							
+
+
       <hr class="featurette-divider">
 
       <div class="row featurette">

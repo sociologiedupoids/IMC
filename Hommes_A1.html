@@ -285,8 +285,21 @@
                 data : [61,52]
                 }]
                });
-              });  
-            </script>
+              }); 
+              	$(document).ready(function () {
+										
+											var cdhleads = new Highcharts.Chart(options);
+										
+										
+										$('#chartType').change(function(){
+											var selected  = this.value;
+											options.series = data[selected];
+											chart = $('#container').highcharts(options);
+										});
+										
+										
+									}); 
+           </script>
          </div>
 
 

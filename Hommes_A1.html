@@ -36,36 +36,7 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
    </head>
-   <style>
-
-
-		path {
-		  stroke:white;
-		  stroke-width: 1px;
-		}
-
-		.legend {
-		  font-size: 11px;
-		}
-
-
-		div.tooltip {   
-		  position: relative;
-		  top: -403px;
-		  left: 620px;                    
-		  width: 320px;                  
-		  height: 20px;                 
-		  padding: 2px;             
-		  font-size: 1.2em;     
-		  background-color: white;
-		  border: 1px;      
-		  border-radius: 8px;           
-		  pointer-events: none; 
-		  font-family: 'bebas_neueregular', Arial, sans-serif;
-		  color: #334d4d;        
-		} 
-
-		</style>
+  
 <!-- NAVBAR
 ================================================== -->
         <body>
@@ -215,105 +186,8 @@
         </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.scrollTo').click( function() { // Au clic sur un élément
-					var page = $(this).attr('href'); // Page cible
-					var speed = 900; // Durée de l'animation (en ms)
-					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-					return false;
-				});
-			});
-		</script>
-
-		<style type="text/css">a:link{text-decoration:none}</style>
-
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-61746180-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-					<div id="container" style="min-width: 620px; max-width:800px; height: 400px; margin: 0 auto;"  class="ChartBox" >
-									
-						        	<script type="text/javascript">
-
-									var data = {
-										name: 'Très vaillants (+10h)',
-										data: [7,7]
-									}, {
-										name: 'Vaillants (entre 5 et 10h)',
-										data: [4,6]
-									}, {
-										name: 'Sportifs (2 à 5h)',
-										data: [11,13]
-									}, {
-										name: 'Sportifs du dimanche (0 à 2h)',
-										data: [17,22]
-									},{
-										name: 'Inactifs',
-										data: [61,52]
-									};
-
-									var options = {
-												chart: {
-													renderTo: 'container',
-													type: 'bar',
-													style:{
-														"font-family":"\"Trebuchet MS\", helvetica, clean, sans-serif",
-														fontWeight:'bold'
-													}
-												},
-				     							colors: ['#824400', '#cc5600', '#df924a', '#44646f','#44646f'],
-												title: {
-													text: ''
-												},
-												xAxis: {
-													categories: ['Inactifs', 'Sportifs du dimanche', 'Sportifs', 'Vaillants', 'Très vaillants']
-												},
-												yAxis: {
-													min: 0,
-													title: {
-														text: 'Proportion'
-													}
-												},
-												legend: {
-													reversed: true
-												},
-												plotOptions: {
-													series: {
-														stacking: 'normal'
-													}
-												},
-												exporting: {
-													enabled: false
-												},
-												credits: {
-													enabled: false
-												};
-
-									$(document).ready(function () {
-										
-											var cdhleads = new Highcharts.Chart(options);
-										
-										
-										$('#chartType').change(function(){
-											var selected  = this.value;
-											options.series = data[selected];
-											chart = $('#container').highcharts(options);
-										});
-										
-										
-									});
-				               
-									 </script>
-
-					</div>
+      					
+					
       </div>
 
       <hr class="featurette-divider">

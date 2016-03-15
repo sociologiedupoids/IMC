@@ -133,12 +133,14 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 	</div>
  </div>
 
-  <div class="container-fluid bg-2 text-center">
-  <img src="images/anniversaire picto.png" width="60"/> 
-	</div>
+  
+
   <div class="container-fluid bg-2 text-center">
   <h3>Votre âge : </h3>
-        
+        <div>
+  <img src="images/anniversaire picto.png" width="60"/> 
+	</div>
+
 <div class="checkbox">
 	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A1">18-24 ans</label>
 	<label class="checkbox-inline"><input type="checkbox" name="optradio"id="A2">25-34 ans</label>
@@ -148,7 +150,7 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 
 
   <div class="container-fluid bg-2 text-center">
-      <button type="button" class="btn btn-default">18-24</button>      
+      <button type="button" class="btn btn-default" id="A11">18-24</button>      
       <button type="button" class="btn btn-default">25-34</button>
       <button type="button" class="btn btn-default">35-49</button>      
       <button type="button" class="btn btn-default">50-64</button>
@@ -171,8 +173,10 @@ function myFunction() {
     var A3 = document.getElementById("A3");
     var A4 = document.getElementById("A4");
     var A5 = document.getElementById("A5");
+    var A11 = document.getElementById("A11");
 
-    if (H.checked == true && A1.checked == true) {
+
+    if (H.checked == true && A11.active == true) {
     	window.open ('Hommes_A1.html','_self',false)
     } else if (F.checked == true && A2.checked == true) {
     	window.open ('Femmes_A2.html','_self',false)

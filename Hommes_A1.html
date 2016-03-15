@@ -151,7 +151,7 @@
         <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
           <script type="text/JavaScript">
               $(function () {
-                $('#container').highcharts({
+                $('#container').Highcharts({
                   chart: {
                   type: 'bar'
                 },
@@ -173,13 +173,15 @@
                   	shared: true
                   },
                   legend: {
-                  reversed: true
+                  	reversed: true
                   },
                   plotOptions: {
-                  columns: {
-                  stacking: 'percent'
+                  	cursor : 'pointer',
+                  	columns: {
+                  	stacking: 'percent'
                   }
-                }, colors: ['#FFD700','#696969'],
+                }, 
+                colors: ['#FFD700','#696969','#696969','#696969'],
                   series: [{
                   name: 'Très vaillants (+10h)',
                   data: [7, 7]

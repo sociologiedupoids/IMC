@@ -151,24 +151,26 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 
 
   <div class="container-fluid bg-2 text-center">
-      <button type="button" data-toggle="button" class="btn btn-default" id="A11">18-24</button>      
+  <div class="btn-group" data-toggle="buttons">
+      <button type="button" class="btn btn-default" id="A11">18-24</button>      
       <button type="button" class="btn btn-default">25-34</button>
       <button type="button" class="btn btn-default">35-49</button>      
       <button type="button" class="btn btn-default">50-64</button>
       <button type="button" class="btn btn-default">65 et +</button>
     </div>
+    </div>
    
 <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-default"><input type="radio"  id="A11">18-24 ans</label>
-  <label class="btn btn-default"><input type="radio" id="A2">25-34 ans</label>  
-  <label class="btn btn-default"><input type="radio"  id="A3">35-49 ans</label>
-  <label class="btn btn-default"><input type="radio"  id="A4">50-64 ans</label> 
-  <label class="btn btn-default"><input type="radio"  id="A5">65 ans et +</label>
+  <label class="btn btn-default"><input type="radio"  id="A111">18-24 ans</label>
+  <label class="btn btn-default"><input type="radio">25-34 ans</label>  
+  <label class="btn btn-default"><input type="radio">35-49 ans</label>
+  <label class="btn btn-default"><input type="radio">50-64 ans</label> 
+  <label class="btn btn-default"><input type="radio">65 ans et +</label>
 </div>
 
    <br>
    
-<button onclick="myFunction()" type="submit" class="btn btn-primary btn-block">Go !</button>
+<button onclick="myFunction()" class="btn btn-primary btn-block">Go !</button>
    
 
 
@@ -183,11 +185,12 @@ function myFunction() {
     var A4 = document.getElementById("A4");
     var A5 = document.getElementById("A5");
     var A11 = document.getElementById("A11");
+    var A111 = document.getElementById("A111");
 
 
-    if (H.checked == true && A11.checked == true) {
+    if (H.checked == true && A111.checked == true) {
     	window.open ('Hommes_A1.html','_self',false)
-    } else if (F.checked == true && A2.checked == true) {
+    } else if (F.checked == true && A11.active == true) {
     	window.open ('Femmes_A2.html','_self',false)
     }
 }

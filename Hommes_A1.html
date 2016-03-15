@@ -143,26 +143,25 @@
     <div class="container marketing">
 
           <!-- START THE FEATURETTES -->
-        <select id="chartType"></select>
-        
+             
         <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
-          <script type="text/JavaScript">
+          <script type="text/javascript">
               $(function () {
                 $('#container').highcharts({
                   chart: {
-                  type: 'bar'
+                  	type: 'bar'
                 },
                   title: {
-                  text: "Sport et cigarettes"
+                  	text: "Sport et cigarettes"
                 },
                   xAxis: {
-                  categories: ['Fumeur', 'Non Fumeur']
+                  	categories: ['Fumeur', 'Non Fumeur']
                 },
                   yAxis: {
-                  min: 0,
-                  max : 100,
-                  title: {
-                  text: 'Pourcentage de sportifs'
+                  	min: 0,
+                  	max : 100,
+                  	title: {
+                  		text: 'Pourcentage de sportifs'
                   }
                 },
                   tooltip: {
@@ -173,27 +172,26 @@
                   	reversed: true
                   },
                   plotOptions: {
-                  	cursor : 'pointer',
-                  	columns: {
-                  	stacking: 'percent'
+                  	series: {
+                  		stacking: 'normal'
                   }
                 }, 
                 colors: ['#FFD700','#696969','#696969','#696969'],
                   series: [{
-                  name: 'Très vaillants (+10h)',
-                  data: [7, 7]
+                  	name: 'Très vaillants (+10h)',
+                  	data: [7, 7]
                 }, {
-                  name: 'Vaillants (entre 5 et 10h)',
-                  data: [4, 6]
+                  	name: 'Vaillants (entre 5 et 10h)',
+                  	data: [4, 6]
                 },{
-                  name : 'Sportifs (2 à 5h)',
-                  data: [11,13]
+                  	name : 'Sportifs (2 à 5h)',
+                  	data: [11,13]
                 },{
-                  name : 'de 0 à 2h',
-                  data : [17,22]
+                  	name : 'de 0 à 2h',
+                  	data : [17,22]
                 },{
-                name : 'Inactifs',
-                data : [61,52]
+                	name : 'Inactifs',
+                	data : [61,52]
                 }]
                });
               }); 

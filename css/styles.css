@@ -3,7 +3,7 @@ body {
 }
 
 .jumbotron {
-  border-bottom: solid 1px #334d4d;
+  border-bottom: solid 1px grey;
 }
 
 .data-wrapper-chart {

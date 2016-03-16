@@ -88,15 +88,35 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
     <!--Graph sur cigarettes et sport -->
     
+<<<<<<< HEAD
     <div class="container-fluid bg-4 text-center">
     <h1>Cigarettes et Sport</h1>
 
     <div class = "col-md-5">
+=======
+    <div class="container-fluid bg-1 text-center">
+    <h1>Cigarettes et Sport</h1>
+    <div id="container"> </div>     
+    </div>
 
+
+		
+>>>>>>> parent of 142c783... essai couleur
+
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <div>
           <script src="js/highcharts.js"></script>
           <script src="js/exporting.js"></script>
 
-          <div id="container4" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+          <div id="container5" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 
 
           <script type="text/javascript">
@@ -130,7 +150,7 @@
                       stacking: 'normal'
                   }
                 }, 
-                colors: ['#002F2F','#046380','#498C83','#5AAFA4','#66CBBE'],
+                /*colors: ['#FFD700','#696969','#696969','#696969'],*/
                   series: [{
                     name: 'Très vaillants (+10h)',
                     data: [7, 7]
@@ -155,6 +175,7 @@
         
           </div>  
         </div>
+<<<<<<< HEAD
     </div>
 
 
@@ -228,6 +249,8 @@
               }); 
                 
           </script>
+=======
+>>>>>>> parent of 142c783... essai couleur
 
         
           </div>  
@@ -246,7 +269,66 @@
         </div>
         <div class="col-md-5">
           
-         
+          <script src="js/highcharts.js"></script>
+          <script src="js/exporting.js"></script>
+
+          <div id="container6" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+ 
+
+
+           <script type="text/javascript">
+              $(function () {
+                $('#container6').highcharts({
+                  chart: {
+                  	type: 'bar'
+                },
+                  title: {
+                  	text: "Sport et cigarettes"
+                },
+                  xAxis: {
+                  	categories: ['Fumeur', 'Non Fumeur']
+                },
+                  yAxis: {
+                  	min: 0,
+                  	max : 100,
+                  	title: {
+                  		text: 'Pourcentage de sportifs'
+                  }
+                },
+                  tooltip: {
+                  	pointFormat : '{series.name}: {point.y}({point.percentage:0f}%)',
+                  	shared: true
+                  },
+                  legend: {
+                  	reversed: true
+                  },
+                  plotOptions: {
+                  	series: {
+                  		stacking: 'normal'
+                  }
+                }, 
+                colors: ['#FFD700','#696969','#696969','#696969'],
+                  series: [{
+                  	name: 'Très vaillants (+10h)',
+                  	data: [7, 7]
+                }, {
+                  	name: 'Vaillants (entre 5 et 10h)',
+                  	data: [4, 6]
+                },{
+                  	name : 'Sportifs (2 à 5h)',
+                  	data: [11,13]
+                },{
+                  	name : 'de 0 à 2h',
+                  	data : [17,22]
+                },{
+                	name : 'Inactifs',
+                	data : [61,52]
+                }]
+               });
+              }); 
+              	
+           </script>
+        </div>
       </div>
 
       <hr class="featurette-divider">

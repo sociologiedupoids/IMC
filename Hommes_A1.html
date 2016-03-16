@@ -241,7 +241,58 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+           <script type="text/javascript">
+              $(function () {
+                $('#container').highcharts({
+                  chart: {
+                  	type: 'bar'
+                },
+                  title: {
+                  	text: "Sport et cigarettes"
+                },
+                  xAxis: {
+                  	categories: ['Fumeur', 'Non Fumeur']
+                },
+                  yAxis: {
+                  	min: 0,
+                  	max : 100,
+                  	title: {
+                  		text: 'Pourcentage de sportifs'
+                  }
+                },
+                  tooltip: {
+                  	pointFormat : '{series.name}: {point.y}({point.percentage:0f}%)',
+                  	shared: true
+                  },
+                  legend: {
+                  	reversed: true
+                  },
+                  plotOptions: {
+                  	series: {
+                  		stacking: 'normal'
+                  }
+                }, 
+                /*colors: ['#FFD700','#696969','#696969','#696969'],*/
+                  series: [{
+                  	name: 'Très vaillants (+10h)',
+                  	data: [7, 7]
+                }, {
+                  	name: 'Vaillants (entre 5 et 10h)',
+                  	data: [4, 6]
+                },{
+                  	name : 'Sportifs (2 à 5h)',
+                  	data: [11,13]
+                },{
+                  	name : 'de 0 à 2h',
+                  	data : [17,22]
+                },{
+                	name : 'Inactifs',
+                	data : [61,52]
+                }]
+               });
+              }); 
+              	
+           </script>
         </div>
       </div>
 

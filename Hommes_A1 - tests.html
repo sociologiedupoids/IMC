@@ -12,10 +12,8 @@
  
     <title>Hommes</title>
 
-    <script src="http://code.highcharts.com/modules/exporting.js"></script>
-
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
+    
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +31,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
    </head>
@@ -42,6 +39,7 @@
 ================================================== -->
 
   <body>
+
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -89,23 +87,10 @@
     <!--Graph sur cigarettes et sport -->
     
     <div class="container-fluid bg-1 text-center">
-    <h1>Cigarettes et Sport</h1>
-    <div id="container"> </div>     
+    <h1>Cigarettes et Sport</h1>   
     </div>
 
-
-		
-
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <div>
+     <div>
           <script src="js/highcharts.js"></script>
           <script src="js/exporting.js"></script>
 
@@ -167,81 +152,31 @@
 
         
           </div>  
-        </div>
 
+		
 
-      					
-					
-      </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
+      <div class=bloc1>
+        
+        <div>
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        
+      </div>
+
+      <hr class="featurette-divider">
+        
+
+      <div>
+        <div>
           <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5">
-          
-          <script src="js/highcharts.js"></script>
-          <script src="js/exporting.js"></script>
-
-          <div id="container6" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
- 
-
-
-           <script type="text/javascript">
-              $(function () {
-                $('#container6').highcharts({
-                  chart: {
-                  	type: 'bar'
-                },
-                  title: {
-                  	text: "Sport et cigarettes"
-                },
-                  xAxis: {
-                  	categories: ['Fumeur', 'Non Fumeur']
-                },
-                  yAxis: {
-                  	min: 0,
-                  	max : 100,
-                  	title: {
-                  		text: 'Pourcentage de sportifs'
-                  }
-                },
-                  tooltip: {
-                  	pointFormat : '{series.name}: {point.y}({point.percentage:0f}%)',
-                  	shared: true
-                  },
-                  legend: {
-                  	reversed: true
-                  },
-                  plotOptions: {
-                  	series: {
-                  		stacking: 'normal'
-                  }
-                }, 
-                /*colors: ['#FFD700','#696969','#696969','#696969'],*/
-                  series: [{
-                  	name: 'Très vaillants (+10h)',
-                  	data: [7, 7]
-                }, {
-                  	name: 'Vaillants (entre 5 et 10h)',
-                  	data: [4, 6]
-                },{
-                  	name : 'Sportifs (2 à 5h)',
-                  	data: [11,13]
-                },{
-                  	name : 'de 0 à 2h',
-                  	data : [17,22]
-                },{
-                	name : 'Inactifs',
-                	data : [61,52]
-                }]
-               });
-              }); 
-              	
-           </script>
+        <div>
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -256,8 +191,8 @@
         <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
-    </div><!-- /.container -->
-
+<!-- /.container -->
+          
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -268,5 +203,8 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+
   </body>
 </html>

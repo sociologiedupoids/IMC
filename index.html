@@ -46,6 +46,77 @@
       background-color: #94b8b8; /* Gris bleu */
       color: #334d4d ; /* Gris foncé*/
   }
+
+/* Debut CSS checkbox stylisée */
+
+.label1 {
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #334d4d
+}
+
+/* hide input */
+input.radio:empty {
+  margin-left: -999px;
+}
+
+/* style label */
+input.radio:empty ~ label {
+  position: relative;
+  float: left;
+  line-height: 2em;
+  text-indent: 0.5em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.radio:empty ~ label:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100px;
+  
+  border-radius: 2px 0 0 2px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+  content:'\2714';
+  text-indent: .9em;
+  color: rgba(51, 77, 77, 0);
+}
+
+input.radio:hover:not(:checked) ~ label {
+  color: #009999;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+  content:'\2714';
+  text-indent: .9em;
+  color: rgba(51, 77, 77, 0);
+  background-color:rgba(51, 77, 77, 0.4);
+  border-radius: 5px;
+}
+
+input.radio:checked ~ label {
+  color:#009999;
+}
+
+/* radio focus */
+input.radio:focus ~ label:before {
+  box-shadow: 0 0 0 3px rgba(51, 77, 77, 0);
+}
+
+/* Fin CSS checkbox stylisée */
+
 </style>
 
   </head>
@@ -141,13 +212,36 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
   <img src="images/anniversaire picto.png" width="60"/> 
 	</div>
 
-<div class="checkbox">
-	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A1">18-24 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A2">25-34 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A3">35-49 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A4">50-64 ans</label>
-	<label class="checkbox-inline"><input type="checkbox" name="optradio" id="A5">65 ans et +</label>
+<!-- Debut checkbox stylisée -->
+
+<div style="display: flex; justify-content: center;align-items: center;">
+  <div>
+  <input type="radio" name="radio" id="radio1" class="radio" checked/>
+  <label class="label1" for="radio1" style="font-size: 0.8em;">18-24 ans</label>
+  </div>
+
+  <div>
+  <input type="radio" name="radio" id="radio2" class="radio"/>
+  <label class="label1" for="radio2" style="font-size: 0.8em;">25-34 ans</label>
+  </div>
+
+  <div> 
+  <input type="radio" name="radio" id="radio3" class="radio"/>
+  <label class="label1" for="radio3" style="font-size: 0.8em;">35-49 ans</label>
+  </div>
+
+  <div> 
+  <input type="radio" name="radio" id="radio4" class="radio"/>
+  <label class="label1" for="radio4" style="font-size: 0.8em;">50-64 ans</label>
+  </div>
+   
+  <div> 
+  <input type="radio" name="radio" id="radio5" class="radio"/>
+  <label class="label1" for="radio5" style="font-size: 0.8em;">65 ans et +</label>
+  </div>
 </div>
+
+<!-- Fin checkbox stylisée -->
 
 
   <div class="container-fluid bg-2 text-center">

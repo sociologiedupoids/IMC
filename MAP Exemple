@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
   </head>
   <body>
+  	<h1>Homme 1</h1>
     <div id="map"></div>
 
     <!-- include cartodb.js library -->
@@ -25,17 +27,17 @@
 
     <script>
       function main() {
-        cartodb.createVis('map', 'https://nicolasderemacle.cartodb.com/api/v2/viz/0d37ced6-ef62-11e5-8be6-0e3ff518bd15/viz.json', {
+        cartodb.createVis('map', 'https://nicolasderemacle.cartodb.com/api/v2/viz/a0f7895a-f0f1-11e5-997b-0ecfd53eb7d3/viz.json', {
             shareable: false,
             title: false,
             description: false,
             search: false,
             tiles_loader: false,
-            center_lat: 46.770971 ,
-            center_lon: 1.376954,
+            center_lat: 46.611211616759554 ,
+            center_lon: 1.8164066970348358,
             zoom: 6,
             gmaps_style:true,
-            force_mobile:true,
+            
             fullscreen:false,
             shareable:true
         })

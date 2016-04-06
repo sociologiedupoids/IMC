@@ -124,7 +124,59 @@
     <h1>Diplome et IMC </h1>
     <div id="container1"> </div>     
     </div>
-  
+    <div>
+          <script src="js/highcharts.js"></script>
+          <script src="js/exporting.js"></script>
+
+          <div id="container1" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+          <script type="text/javascript">
+
+            $(function() {
+            $('#container1').highcharts({
+              chart: {
+                type: 'bar'
+              },
+              title: {
+                text: 'IMC moyen par niveau d\'étude pour les hommes'
+              },
+              xAxis: {
+                categories: ['Aucun', 'CEP, diplôme fin études obligatoires', 'CAP, BEP, BEPC, Brevet élém., BEPS', 'Brevet de techn., BP, BEI, BEC, BEA', 'Bac techno ou Bac pro', 'Bac général', 'BTS, DUT, BEST, DEUG, Paramédical', '2ème/3ème cycle univ., Grande Ecole'],
+                title: {
+                  text: null
+                },
+              },
+              yAxis: {
+                min: 20,
+                title: {
+                  text: 'IMC',
+                  align: 'high'
+                },
+                labels: {
+                  overflow: 'justify'
+                }
+              },
+              plotOptions: {
+                bar: {
+                  dataLabels: {
+                    enabled: true,
+                    crop:false,
+                    overflow:'none'
+                  }
+                }
+              },
+              credits: {
+                enabled: true
+              },
+              series: [{
+                showInLegend: false,
+                data: [{y:25.4, color:'#2c6b6b'}, {y:27, color:'#337a7a'}, {y:25.9, color:'#398989'}, {y:26.2, color:'#409999'}, {y:25, color:'#53a3a3'}, {y:25.6, color:'#66adad'}, {y:25.1, color:'#79b7b7'}, {y:24.9, color:'#8cc1c1'}]
+              }]
+            });
+            });
+          </script>
+    </div>  
 
     <div class="container-fluid bg-2 text-center">
     <h1>Fruits et légumes vs fast food</h1>

@@ -16,3 +16,13 @@ body {
 #interactive-chart svg {
   height: 400px;
 }
+
+#container4{
+ overflow: auto
+}
+                 
+#fumeur{
+ float: right;
+ width: 340px;
+ margin-left: 10px;
+}

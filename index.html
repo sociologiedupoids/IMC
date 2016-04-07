@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,20 +47,16 @@
       background-color: #94b8b8; /* Gris bleu */
       color: #334d4d ; /* Gris foncé*/
   }
-
 /* Debut CSS checkbox stylisée */
-
 .label1 {
   width: 100px;
   border-radius: 5px;
   border: 2px solid #334d4d
 }
-
 /* hide input */
 input.radio:empty {
   margin-left: -999px;
 }
-
 /* style label */
 input.radio:empty ~ label {
   position: relative;
@@ -73,7 +70,6 @@ input.radio:empty ~ label {
   -ms-user-select: none;
   user-select: none;
 }
-
 input.radio:empty ~ label:before {
   position: absolute;
   display: block;
@@ -85,18 +81,15 @@ input.radio:empty ~ label:before {
   
   border-radius: 2px 0 0 2px;
 }
-
 /* toggle hover */
 input.radio:hover:not(:checked) ~ label:before {
   content:'\2714';
   text-indent: .9em;
   color: rgba(51, 77, 77, 0);
 }
-
 input.radio:hover:not(:checked) ~ label {
   color: #009999;
 }
-
 /* toggle on */
 input.radio:checked ~ label:before {
   content:'\2714';
@@ -105,24 +98,19 @@ input.radio:checked ~ label:before {
   background-color:rgba(51, 77, 77, 0.4);
   border-radius: 5px;
 }
-
 input.radio:checked ~ label {
   color:#009999;
 }
-
 /* radio focus */
 input.radio:focus ~ label:before {
   box-shadow: 0 0 0 3px rgba(51, 77, 77, 0);
 }
-
 /* Fin CSS checkbox stylisée */
-
 </style>
 
   </head>
 
 <!-- NAVBAR
-
 ================================================== -->
 
 <!-- First Container -->
@@ -270,7 +258,6 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 function myFunction() {
     var H = document.getElementById("H");
     var F = document.getElementById("F");
-
     var A1 = document.getElementById("A1");
     var A2 = document.getElementById("A2");
     var A3 = document.getElementById("A3");
@@ -278,8 +265,6 @@ function myFunction() {
     var A5 = document.getElementById("A5");
     var A11 = document.getElementById("A11");
     var A111 = document.getElementById("A111");
-
-
     if (H.checked == true && A111.checked == true) {
     	window.open ('Hommes_A1.html','_self',false)
     } else if (F.checked == true && A11.active == true) {

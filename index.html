@@ -51,6 +51,8 @@
       background-color: #FFFFFF; /* Gris bleu */
       color: #009999 ; /* Gris foncé*/
   }
+
+  
 /* Debut CSS checkbox stylisée */
 .label1 {
   width: 100px;
@@ -132,37 +134,51 @@ input.radio:focus ~ label:before {
 </div>
  
       <!-- ESSAI QUESTIONS -->
+
+
 <div class="row">
-        <div class="col-md-7">
+
+<div style="display: flex;align-items: center; text-align: justify;">
+ 
+<div class='IMC_block' style="width:700px; margin-left: 70px; height:300px;">        
+
+        
 <h3>L'IMC, qu'est-ce que c'est?</h3>
 <p>L'indice de masse corporelle (IMC) est une grandeur qui permet d’estimer la corpulence d’une personne. Elle a été inventée par Adolphe Quetelet, scientifique belge fondateur de la statistique moderne — cet indice est aussi appelé indice de Quetelet.
 
 Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait été conçu au départ pour les adultes de 18 à 65 ans, de nouveaux diagrammes de croissance ont vu le jour au cours des dernières décennies pour les enfants de 0 à 18 ans. Dans les deux cas, il constitue une indication et intervient dans le calcul de l’IMG.</p>
-  </div>
+        
+</div>
 
-          <div class="col-md-4">
+<div class='IMC_block' style="width:700px; margin-left: 100px; height:300px;">
+
+        
           <h3>Calculez votre IMC : </h3>
 
-	 <form method="POST" id="formulaire">
-	 <div class="form-group">
-	 <div class="col-xs-6">
-    <img src="images/poids orange.png" width="43"> <label for="ex1">Poids</label> 
+	   <form method="POST" id="formulaire">
+	   
+     <div style="display: flex;align-items: center; text-align: justify; margin-top: 20px;">
+	   
+     <div style="width:190px;">
+    <div style="text-align: center;"><img src="images/poids orange.png" width="43"> <label for="ex1">Poids</label> </div>
 	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Poids" value="60" size="10" onblur="calculIMC()">
 		</div>
-		 <div class="col-xs-6">
-    <img src="images/metre picto.png" width="70"> <label for="ex1">Taille</label>
+		 
+     <div style="width:190px; margin-left: 20px;">
+    <div style="text-align: center;"><img src="images/metre picto.png" width="70"> <label for="ex1">Taille</label></div>
 	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Taille" value="1.70" size="10" onblur="calculIMC()">
 		</div>
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		 <div class="form-group">
-     <label for="inputdefault">IMC</label>
+		
+    </div>
+		
+		
+    <div style="width:190px; margin-top: 20px;">
+    <div style="text-align: center;"><label for="inputdefault">IMC</label></div>
 	  	<input class="form-control" id="inputdefault" style="color:black;" type="text"  name="IMC" size="10">
 		</div>
-        </form>
+        
+    </form>
+</div>
         <script>
         function calculIMC()
         {
@@ -179,9 +195,11 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
         }
         }
         </script>
+
 </div>
-    </div>
-    </div>
+<br>
+  </div>
+</div>
 
 <!-- 2ème Container -->
   <div class="container-fluid bg-2 text-center">
@@ -237,23 +255,7 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 <!-- Fin checkbox stylisée -->
 
 
-  <div class="container-fluid bg-2 text-center">
-      <button type="button" class="btn btn-default" id="A11">18-24</button>      
-      <button type="button" class="btn btn-default">25-34</button>
-      <button type="button" class="btn btn-default">35-49</button>      
-      <button type="button" class="btn btn-default">50-64</button>
-      <button type="button" class="btn btn-default">65 et +</button>
-    </div>
-   
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-default active"><input type="radio"  id="A111" autocomplete="off" checked>18-24 ans</label>
-  <label class="btn btn-default"><input type="radio"autocomplete="off">25-34 ans</label>  
-  <label class="btn btn-default"><input type="radio" autocomplete="off">35-49 ans</label>
-  <label class="btn btn-default"><input type="radio" autocomplete="off">50-64 ans</label> 
-  <label class="btn btn-default"><input type="radio" autocomplete="off">65 ans et +</label>
-</div>
-
-   <br>
+<br>
    
 <button onclick="myFunction()" class="btn btn-primary btn-block">Go !</button>
    

@@ -136,7 +136,7 @@
 
     <div class="container-fluid bg-1 text-center">
     <h1>Diplome et IMC </h1>
-    <div id="container1"> </div>     
+       
     </div>
     <div>
           <script src="js/highcharts.js"></script>
@@ -204,18 +204,45 @@
 
     <div class="container-fluid bg-4 text-center">
     <h1>Cigarettes et Sport : bon ménage ?</h1>
-    <div id="container4"> </div>     
+    <div id="container4"> </div>   
+    <h3><strong>Les Fumeurs ont un IMC plus faible</strong></h3>  
     </div>
+
+    <div class="row" >
+     <!--<div id="fumeur" style="min-width: 100px; max-width: 100px; height: 50px; margin: 0 auto"></div>-->
+      <div class="col-md-1" >
+        
+         <img src="images/cigarette.png" width="150" height="150" />  
+
+              <p dlass ="text-left">Mettre phrase sur le nombre de fumeurs/fumeuses en France de la catégorie d'age en question si possible. 22.57</p>
+              <p class="pchiffre"><span class="chiffre">22.57</span> IMC </p>
+             
+
+       </div>
+                          
+      <div class="col-md-2" >
+              <div class="logo"><img src="images/cigarettenon.png" width="150" height="160" />  </div>
+              <p>a voir quoi mettre. IMC de 23.35 </p>
+
+              <p class="pchiffre"><span class="chiffre">23.35</span> IMC</p>
+
+      </div> 
+             
+           
+     </div>
+
+
+
     <div>
           <script src="js/highcharts.js"></script>
           <script src="js/exporting.js"></script>
 
-          <div id="container4" style="min-width: 200px; max-width: 200px; height: 100px; margin: 0 auto"></div>
+          <div id="container5" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 
 
           <script type="text/javascript">
               $(function () {
-                $('#container4').highcharts({
+                $('#container5').highcharts({
                   chart: {
                     type: 'bar'
                 },
@@ -241,7 +268,7 @@
                   }
                   },
                   chart: {
-							renderTo: 'container4',
+							renderTo: 'container5',
 							type: 'bar',
 							style:{
 									"font-family":"\"Trebuchet MS\", helvetica, clean, sans-serif",
@@ -274,17 +301,32 @@
           </script>
        
     </div>  
+    <div class="container-fluid bg-6 text-center">
+     <h3><strong>IMC : fumeurs vs non fumeurs</strong></h3>  
+
+    <div class="row" >
+     <!--<div id="fumeur" style="min-width: 100px; max-width: 100px; height: 50px; margin: 0 auto"></div>-->
+   
+        
+         <img src="images/Classe1hnf.PNG" />  
+         <img src="images/Classe1hf.PNG"  />  
+
+             
+      </div> 
+             
+           
+     </div>
         
 
 
-    <div class="container-fluid bg-5 text-center">
+    <div class="container-fluid bg-7 text-center">
     <h1>Plutôt bien cuit ou saignant ?</h1>
     <br>
     <br>
-    <br>
-    <br>
-          <h3>Carte représentant le pourcentage de personnes qui te ressembles par région mangeant son Steack Saignant. </h3>
 
+          <h2>Carte représentant le pourcentage de personnes qui te ressembles par région mangeant son Steack Saignant. </h3>
+    <br>
+    <br>
       <div>
         <div id="map">
 
@@ -326,8 +368,15 @@
         window.onload = main;
       </script>
       </div>
-      <div>
-        <p> blablabla</p>
+      <div class="row" style="justify-content: space-around;display:flex;">
+        <div class="col-md-7">
+        <p> Les français du Sud de la France on une préférence pour le steack saignant. Plus proche des élevages, ils font confiance 
+        aux éleveurs et en la qualité de la viande. A l'inverse, les français d'Iles de Frances tandes à faire bien cuire leur steack.
+        Ainsi la proximité avec le lieu d'élevage influ sur la couleur de l'assiette !
+        </p> 
+        <br>
+        <br>
+      </div>
       </div>
 </div>     
 </div>

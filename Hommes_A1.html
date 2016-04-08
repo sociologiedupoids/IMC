@@ -36,6 +36,21 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+      <style>
+        html, body, #map {
+          height: 90%;
+          padding: 0;
+          margin: 0;
+          height: 600px;
+          width: 600px;
+        }
+      </style>
+
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
    </head>
   
 
@@ -267,6 +282,47 @@
     <h1>Plutôt bien cuit ou saignant ?</h1>
     <div id="container5"> </div>     
     </div>
+
+      <div id="map"></div>
+
+      <!-- include cartodb.js library -->
+      <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+      <script>
+        function main() {
+          cartodb.createVis('map', 'https://nicolasderemacle.cartodb.com/api/v2/viz/44e3c08e-f141-11e5-a65d-0e787de82d45/viz.json', {
+              shareable: false,
+              title: false,
+              description: false,
+              search: false,
+              tiles_loader: false,
+              center_lat: 46.611211616759554 ,
+              center_lon: 1.8164066970348358,
+              zoom: 6,
+              gmaps_style:true,
+              
+              fullscreen:false,
+              shareable:true
+          })
+          .done(function(vis, layers) {
+            // layer 0 is the base layer, layer 1 is cartodb layer
+            // setInteraction is disabled by default
+            layers[1].setInteraction(true);
+            layers[1].on('featureOver', function(e, latlng, pos, data) {
+              cartodb.log.log(e, latlng, pos, data);
+            });
+            // you can get the native map to work with it
+            var map = vis.getNativeMap();
+            // now, perform any operations you need
+            // map.setZoom(3);
+            // map.panTo([50.5, 30.5]);
+          })
+          .error(function(err) {
+            console.log(err);
+          });
+        }
+        window.onload = main;
+      </script>
 
           
 

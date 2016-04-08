@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
  
-    <title>Femmes 1</title>
+    <title>Femmes 65 ans et plus</title>
 
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
@@ -19,6 +19,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -65,7 +67,7 @@
       border-radius: 8px;           
       pointer-events: none; 
       font-family: 'bebas_neueregular', Arial, sans-serif;
-      color: #44646f;        
+      color: #046380;        
     } 
 
 </style>
@@ -124,7 +126,60 @@
     <h1>Diplome et IMC </h1>
     <div id="container1"> </div>     
     </div>
-  
+    <div>
+          <script src="js/highcharts.js"></script>
+          <script src="js/exporting.js"></script>
+
+          <div id="container1" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+          <script type="text/javascript">
+
+  $(function() {
+  $('#container1').highcharts({
+    chart: {
+      type: 'bar'
+    },
+    title: {
+      text: 'IMC moyen par niveau d\'étude pour les femmes'
+    },
+    xAxis: {
+      categories: ['Aucun', 'CEP, diplôme fin études obligatoires', 'CAP, BEP, BEPC, Brevet élém., BEPS', 'Brevet de techn., BP, BEI, BEC, BEA', 'Bac techno ou Bac pro', 'Bac général', 'BTS, DUT, BEST, DEUG, Paramédical', '2ème/3ème cycle univ., Grande Ecole'],
+      title: {
+        text: null
+      }
+    },
+    yAxis: {
+      min: 20,
+      title: {
+        text: 'IMC',
+        align: 'high'
+      },
+      labels: {
+        overflow: 'justify'
+      }
+    },
+    plotOptions: {
+      bar: {
+        dataLabels: {
+          enabled: true,
+          crop:false,
+          overflow:'none'
+        }
+      }
+    },
+    credits: {
+      enabled: true
+    },
+    series: [{
+      showInLegend: false,
+      data: [{y:26.4, color:'#aa6822'}, {y:27.5, color:'#c27727'}, {y:24.3, color:'#da862c'}, {y:24.2, color:'#f39531'}, {y:24, color:'#f49f45'}, {y:23.5, color:'#f5aa5a'}, {y:23.1, color:'#f6b46e'}, {y:22.6, color:'#f7bf83'}]
+    }]
+  });
+  });
+
+          </script>
+    </div>  
 
     <div class="container-fluid bg-2 text-center">
     <h1>Fruits et légumes vs fast food</h1>
@@ -138,42 +193,44 @@
 
     <div class="container-fluid bg-4 text-center">
     <h1>Cigarettes et Sport : bon ménage ?</h1>
-    <div id="container4"> </div>     
+    <div id="container4"> </div>   
+    <h3><strong>Les Fumeuses ont un IMC plus faible</strong></h3>  
     </div>
-      <div id="container4" style="min-width: 200px; max-width: 200px; height: 100px; margin: 0 auto"></div>
-        <h1 class="Les Fumeuses ont un IMC plus faible"></h1>
+     <div id="fumeur" style="min-width: 100px; max-width: 100px; height: 50px; margin: 0 auto"></div>
+      <div class="col-md-1"></div>
+        
 
-            <div class="fume">
+         
+              <div class="logo"><img src="images/cigarette.png" width="150" height="150" />  </div>
+
+              <p>Mettre phrase sur le nombre de fumeurs/fumeuses en France de la catégorie d'age en question si possible. 25.33</p>
+              <p class="pchiffre"><span class="chiffre">25.33</span> IMC </p>
               
-              <div class="logo"><img src="images/cigarette.png" width="300" height="300" />  </div>
 
-              <p>Mettre phrase sur le nombre de fumeurs/fumeuses en France de la catégorie d'age en question si possible.</p>
-              <p class="pchiffre"><span class="chiffre">24</span> </p>
-              
+      </div>
+                          
+      <div class="col-md-2"></div>
+              <div class="logo"><img src="images/cigarettenon.png" width="150" height="160" />  </div>
+              <p>a voir quoi mettre. IMC de 19.05 </p>
 
-            </div>
+              <p class="pchiffre"><span class="chiffre">19.05</span> IMC</p>
 
-            <div class="fume pas">
-              <p>a voir quoi mettre. </p>
-              <div class="logo"><img src="images/cigarettenon.png" width="300" height="300" />  </div>
-
-              <p class="pchiffre"><span class="chiffre">25</span> </p>
+      </div> 
+             
            
-              
-            </div>
-   
+     </div>
 
 
-    <div>
-          <script src="js/highcharts.js"></script>
-          <script src="js/exporting.js"></script>
+     <div>
+      <script src="js/highcharts.js"></script>
+      <script src="js/exporting.js"></script>
 
-          <div id="container4" style="min-width: 200px; max-width: 200px; height: 100px; margin: 0 auto"></div>
+      <div id="container5" style="min-width: 200px; max-width: 200px; height: 100px; margin: 0 auto"></div>
 
 
           <script type="text/javascript">
               $(function () {
-                $('#container4').highcharts({
+                $('#container5').highcharts({
                   chart: {
                     type: 'bar'
                 },
@@ -236,9 +293,9 @@
         
 
 
-    <div class="container-fluid bg-5 text-center">
+    <div class="container-fluid bg-6 text-center">
     <h1>Plutôt bien cuit ou saignant ?</h1>
-    <div id="container5"> </div>     
+    <div id="container6"> </div>     
     </div>
 
           

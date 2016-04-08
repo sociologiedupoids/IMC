@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
  
-    <title>Femmes 18-24 ans</title>
+    <title>Hommes 1</title>
 
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
@@ -36,6 +36,20 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+      <style>
+         #map {
+          height: 100%;
+          padding: 0;
+          margin: 0 auto;
+          height: 800px;
+          width: 800px;
+        }
+      </style>
+
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
    </head>
   
 
@@ -377,10 +391,70 @@
            
      </div>
 
-    <div class="container-fluid bg-7 text-center">
+      <div class="container-fluid bg-7 text-center">
+     <div class="container-fluid bg-7 text-center">
     <h1>Plutôt bien cuit ou saignant ?</h1>
-    <div id="container7"> </div>     
-    </div>
+    <br>
+    <br>
+
+          <h2>Comment est la cuisson du steack des Femmes de 18-24 ans en France ? </h2>
+          <h3>Vers le rouge la région est majoritairement saignante tandis que vers le jaune, elle est cuite.</h3>
+    <br> 
+    <br>
+      <div>
+        <div id="map">
+
+      <!-- include cartodb.js library -->
+      <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+      <script>
+        function main() {
+          cartodb.createVis('map', 'https://nicolasderemacle.cartodb.com/api/v2/viz/1bef70a0-f1a1-11e5-8c7a-0e31c9be1b51/viz.json', {
+              shareable: false,
+              title: false,
+              description: false,
+              search: false,
+              tiles_loader: false,
+              center_lat: 46.611211616759554 ,
+              center_lon: 1.8164066970348358,
+              zoom: 6,
+              gmaps_style:true,
+              
+              fullscreen:false,
+              shareable:true
+          })
+          .done(function(vis, layers) {
+            // layer 0 is the base layer, layer 1 is cartodb layer
+            // setInteraction is disabled by default
+            layers[1].setInteraction(true);
+            layers[1].on('featureOver', function(e, latlng, pos, data) {
+              cartodb.log.log(e, latlng, pos, data);
+            });
+            // you can get the native map to work with it
+            var map = vis.getNativeMap();
+            // now, perform any operations you need
+            // map.setZoom(3);
+            // map.panTo([50.5, 30.5]);
+          })
+          .error(function(err) {
+            console.log(err);
+          });
+        }
+        window.onload = main;
+      </script>
+      </div>
+      <div class="row" style="justify-content: space-around;display:flex;">
+        <div class="col-md-7">
+        <p style="text-justify: distribute-all-lines;"><b> Les femmes du Sud de la France ont une préférence pour un steack saignant. Plus proche des élevages, ils font confiance aux éleveurs et à la qualité de la viande. À l'inverse, les femmes d'Ile-de-France tendent à faire bien cuire leur steack. Ainsi la proximité avec le lieu d'élevage influe sur la couleur de l'assiette !
+        </b></p> 
+        <br>
+        <p style="text-justify: distribute-all-lines;">  <b> Les femmes de 18-24 ans de Loraine ont l'IMC le plus faible. Parmis elles, 68% d'entre elles mangent leur steack bien cuit; la quiche est bien cuite ! </b> </p>
+
+        <br>
+        <br>
+      </div>
+      </div>
+</div>     
+</div>
 
           
 

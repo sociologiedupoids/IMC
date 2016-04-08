@@ -42,7 +42,7 @@
 <style>
 
 
-        path {
+/*       path {
       stroke:white;
       stroke-width: 1px;
     }
@@ -51,8 +51,10 @@
       font-size: 11px;
     }
 
+    */
 
-    div.tooltip {   
+
+/*    div.tooltip {   
       position: relative;
       top: -403px;
       left: 620px;                    
@@ -67,6 +69,8 @@
       font-family: 'bebas_neueregular', Arial, sans-serif;
       color: #44646f;        
     } 
+
+    */
 
 </style>
 
@@ -122,7 +126,6 @@
 
     <div class="container-fluid bg-1 text-center">
     <h1>Diplome et IMC </h1>
-     
     </div>
     <div>
           <script src="js/highcharts.js"></script>
@@ -190,8 +193,8 @@
     <h1>En couple, célibataire ? </h1>
     </div>
       <div>
-  <script src="js/highcharts.js"></script>
-          <script src="js/exporting.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+ <script src="https://code.highcharts.com/modules/exporting"> </script>
 
               <div id="container3" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 
@@ -199,6 +202,9 @@
 
     $(function () {
     $('#container3').highcharts({
+      chart: {
+      type: 'line'
+        },
         title: {
             text: 'IMC moyen par âge pour les femmes',
             x: -20 //center
@@ -223,10 +229,12 @@
             borderWidth: 0
         },
         series: [{
+            type : 'line',
             name: 'Célibataire',
             data: [21.9598, 21.98466, 22.0095, 22.03507, 22.06279, 22.09345, 22.12756, 22.16603, 22.21076, 22.26276, 22.32167, 22.38692, 22.45774, 22.53186, 22.60749, 22.68027, 22.74504, 22.80023, 22.84971, 22.89924, 22.95382, 23.01516, 23.08641, 23.17339, 23.28398, 23.422, 23.58842, 23.78129, 23.99435, 24.21972, 24.44694, 24.66562, 24.86724, 25.04165, 25.18329, 25.29482, 25.37702, 25.4307, 25.45755, 25.45942, 25.43803, 25.39527, 25.33399, 25.25745, 25.16477, 25.05783, 24.94238, 24.82398, 24.70715, 24.59347, 24.48516, 24.38401, 24.29115, 24.20666, 24.12894, 24.05554, 23.98415],
             color : '#3690c0'
         },  {
+            type : 'line',
             name: 'Marié',
             data: [23.17365, 23.12828, 23.08184, 23.03199, 22.98241, 22.93764, 22.90144, 22.87751, 22.86702, 22.8698, 22.88409, 22.90793, 22.94045, 22.98219, 23.03459, 23.09787, 23.17056, 23.24945, 23.33074, 23.41115, 23.48763, 23.55826, 23.62393, 23.68594, 23.74648, 23.80958, 23.87914, 23.95889, 24.05154, 24.15921, 24.28196, 24.41671, 24.55918, 24.70615, 24.85397, 24.99897, 25.13812, 25.26802, 25.3862, 25.49061, 25.57954, 25.6506, 25.70182, 25.73217, 25.74007, 25.72461, 25.68678, 25.6287, 25.5523, 25.45805, 25.34633, 25.21974, 25.08249, 24.93811, 24.78993, 24.64111, 24.49275],
             color : '#f768a1'
@@ -244,15 +252,25 @@
 
     <div class="container-fluid bg-4 text-center">
     <h1>Cigarettes et Sport : bon ménage ?</h1>
+<<<<<<< HEAD
     <div id="container4"> </div>   
     <h3><strong>Fumer fait maigrir !</strong></h3>  
+=======
+    <h3><strong>Les Fumeuses ont un IMC plus faible</strong></h3>  
+>>>>>>> origin/gh-pages
     </div>
 
+    <div class="container-fluid text-center">
     <div class="row" >
+<<<<<<< HEAD
      <!--<div id="fumeur" style="min-width: 100px; max-width: 100px; height: 50px; margin: 0 auto"></div>-->
      <p> Et oui, comme quoi toutes les idées reçues ne sont pas fausses. Chez les jeunes, les fumeuses sont plus minces. </p>
       <div class="col-md-1" >
 
+=======
+      <div class="col-md-6" >
+        
+>>>>>>> origin/gh-pages
          <img src="images/cigarette.png" width="150" height="150" />  
 
               <p dlass ="text-left"> es en France de la catégorie d'age en question si possible</p>
@@ -261,21 +279,23 @@
 
        </div>
                           
-      <div class="col-md-2" >
+      <div class="col-md-6" >
               <div class="logo"><img src="images/cigarettenon.png" width="150" height="160" />  </div>
               <p>a voir quoi mettre. IMC de 22.56 </p>
 
               <p class="pchiffre"><span class="chiffre">22.56</span> IMC</p>
 
-      </div> 
-             
-           
+      </div>       
      </div>
+
+     </div>
+
+
     <div>
           <script src="js/highcharts.js"></script>
           <script src="js/exporting.js"></script>
 
-          <div id="container5" ></div>
+              <div id="container5" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
 
 
           <script type="text/javascript">
@@ -344,15 +364,15 @@
 <div class="container-fluid bg-6 text-center">
      <h3><strong>IMC : fumeuses vs non fumeuses</strong></h3>  
 
-    <div class="row" >
      <!--<div id="fumeur" style="min-width: 100px; max-width: 100px; height: 50px; margin: 0 auto"></div>-->
    
-        
-         <img src="images/Classe1fnf.PNG" />  
-         <img src="images/Classe1ff.PNG"  />  
+
+         <img src="images/Classe1fnf.PNG" style="min-width: 310px; max-width: 800px; height: 200px; margin: 0 auto"/>  
+         <br>
+         <img src="images/Classe1ff.PNG" style="min-width: 310px; max-width: 800px; height: 200px; margin: 0 auto" />  
 
              
-      </div> 
+    
              
            
      </div>

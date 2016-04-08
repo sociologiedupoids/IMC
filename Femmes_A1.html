@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
  
-    <title>Hommes 1</title>
+    <title>Femmes 18-24 ans</title>
 
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
@@ -140,7 +140,7 @@
 
     <div class="container-fluid bg-1 text-center">
     <img src="images/balance.png" width="60">
-    <h1>Diplome et IMC </h1>
+    <h1>Diplôme et IMC </h1>
     </div>
     <div>
           <script src="js/highcharts.js"></script>
@@ -201,8 +201,121 @@
     <div class="container-fluid bg-2 text-center">
     <img src="images/balance.png" width="60">
     <h1>Fruits et légumes vs fast food</h1>
-    <div id="container2"> </div>     
+       
     </div>
+    <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
+
+          <div id="container2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+          <script type="text/javascript">
+              $(function () {
+
+              $(document).ready(function () {
+          
+                  $('#container2').highcharts({
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: null,
+                          plotShadow: false,
+                          type: 'pie'
+                      },
+                      title: {
+                          text: 'Fréquence de consommation de fruits et légumes'
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              allowPointSelect: true,
+                              cursor: 'pointer',
+                              dataLabels: {
+                                  enabled: false
+                              },
+                              showInLegend: true
+                          }
+                      },
+                      colors: ['#52AB8D','#41ECB3','#498C83'],
+                      series: [{
+                          name: 'Femmes',
+                          colorByPoint: true,
+                          data: [{
+                              name: '1 fois/jour au moins',
+                              y: 17.79
+                          }, {
+                              name: 'Entre 1 et 3 fois/jour',
+                              y: 47.23,
+                              sliced: true,
+                              selected: true
+                          }, {
+                              name: '+ de 3 fois/jour',
+                              y: 34.96
+                       
+                          }]
+                      }]
+                  });
+              });
+          });
+          </script>
+        
+
+  <div id="container4" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+  <script type="text/javascript">
+          $(function () {
+
+    $(document).ready(function () {
+    
+        // Build the chart
+        $('#container4').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Fréquence de consommation de Fast Food'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            colors: ['#F0580D','#EC9141','#FDC541'],
+            series: [{
+                name: 'Femmes',
+                colorByPoint: true,
+                data: [{
+                    name: 'Moins de 1 fois/mois ',
+                    y: 81.71
+                }, {
+                    name: 'Entre 1 et 3 fois/mois',
+                    y: 13.88,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: '1 fois/mois',
+                    y: 4.40
+             
+                }]
+            }]
+        });
+    });
+});
+
+
+  </script>
+  </div>
 
 
     <div class="container-fluid bg-3 text-center">
@@ -394,13 +507,12 @@
            
      </div>
 
-<<<<<<< HEAD
     <div class="container-fluid bg-7 text-center">
     <img src="images/balance.png" width="60">
-=======
+
       <div class="container-fluid bg-7 text-center">
      <div class="container-fluid bg-7 text-center">
->>>>>>> origin/gh-pages
+
     <h1>Plutôt bien cuit ou saignant ?</h1>
     <br>
     <br>

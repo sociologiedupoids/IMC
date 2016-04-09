@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
  
-    <title>Hommes 1</title>
+    <title>Hommes 25-34 ans</title>
 
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
@@ -56,15 +56,6 @@
 
 <style>
 
-
-        path {
-      stroke:white;
-      stroke-width: 1px;
-    }
-
-    .legend {
-      font-size: 11px;
-    }
 
 
     div.tooltip {   
@@ -198,10 +189,65 @@
     <div id="container2"> </div>     
     </div>
 
-    <div class="container-fluid bg-3 text-center">
+
+   <div class="container-fluid bg-3 text-center">
     <h1>En couple, célibataire ? </h1>
-    <div id="container3"> </div>     
     </div>
+      <div>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+ <script src="https://code.highcharts.com/modules/exporting"> </script>
+
+              <div id="container3" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+          <script type="text/javascript">
+
+    $(function () {
+    $('#container3').highcharts({
+      chart: {
+      type: 'line'
+        },
+        title: {
+            text: 'IMC moyen par âge pour les hommes',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['18' ,'19' ,'20' ,'21' ,'22' ,'23' ,'24' ,'25' ,'26' ,'27' ,'28' ,'29' ,'30' ,'31' ,'32' ,'33' ,'34' ,'35' ,'36' ,'37' ,'38' ,'39' ,'40' ,'41' ,'42' ,'43' ,'44' ,'45' ,'46' ,'47' ,'48' ,'49' ,'50' ,'51' ,'52' ,'53' ,'54' ,'55' ,'56' ,'57' ,'58' ,'59' ,'60' ,'61' ,'62' ,'63' ,'64' ,'65' ,'66' ,'67' ,'68' ,'69' ,'70' ,'71' ,'72' ,'73' ,'74']
+        },
+        yAxis: {
+            title: {
+                text: 'IMC'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            type : 'line',
+            name: 'Célibataire',
+            data: [22.35108, 22.497, 22.64355, 22.79056, 22.93913, 23.09044, 23.24513, 23.40448, 23.56837, 23.73445, 23.90058, 24.06489, 24.22623, 24.3846, 24.54035, 24.69414, 24.84511, 24.99144, 25.13136, 25.26185, 25.38076, 25.4902, 25.59054, 25.68109, 25.76383, 25.84124, 25.91643, 25.99322, 26.07065, 26.14545, 26.21246, 26.27233, 26.32663, 26.37807, 26.42771, 26.47652, 26.52661, 26.57639, 26.62016, 26.65238, 26.67191, 26.6822, 26.69149, 26.70857, 26.73473, 26.7638, 26.78988, 26.81034, 26.824, 26.83272, 26.83879, 26.84476, 26.85338, 26.8672, 26.88706, 26.91219, 26.94025],
+            color : '#3690c0'
+        },  {
+            type : 'line',
+            name: 'Marié',
+            data: [22.68356, 22.91971, 23.15576, 23.39114, 23.62426, 23.85098, 24.06517, 24.26418, 24.44503, 24.60608, 24.74769, 24.87106, 24.97869, 25.07126, 25.14868, 25.21165, 25.26284, 25.30481, 25.33909, 25.36745, 25.39212, 25.41605, 25.44134, 25.47148, 25.50945, 25.55659, 25.61354, 25.68035, 25.75608, 25.83915, 25.92655, 26.0149, 26.10055, 26.18098, 26.25505, 26.32272, 26.38504, 26.44412, 26.50048, 26.55359, 26.60142, 26.64347, 26.6794, 26.70702, 26.72467, 26.72987, 26.72223, 26.70425, 26.67846, 26.64512, 26.60414, 26.55762, 26.50953, 26.4627, 26.41686, 26.37081, 26.32438],
+            color : '#f768a1'
+        }]
+    });
+});
+
+
+
+          </script>
+
+              </div>
 
     <div class="container-fluid bg-4 text-center">
     <h1>Cigarettes et Sport : bon ménage ?</h1>

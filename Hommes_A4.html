@@ -36,7 +36,22 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+      <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+      <style>
+         #map {
+          height: 100%;
+          padding: 0;
+          margin: 0 auto;
+          height: 800px;
+          width: 800px;
+        }
+      </style>
+
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
    </head>
+
   
 
 <style>
@@ -111,7 +126,8 @@
     
 
     <div class="container-fluid bg-1 text-center">
-    <h1>Diplome et IMC </h1>
+    <img src="images/balance.png" width="60">
+    <h1>Diplôme et IMC </h1>
       
     </div>
     <div>
@@ -166,14 +182,143 @@
             });
             });
           </script>
-    </div>  
+    </div>
+    <div class="row" style="justify-content: space-around;display:flex;">
+        <div class="col-md-7">
+        <p style="text-justify: distribute-all-lines;text-align: justify;"><b> Ne prenez pas cet air hautain parce que vous avez fait de longues études. Vous êtes quasiment en surpoids du haut de vos 24,9 points d'IMC. Alors que ceux qui n'ont aucun diplôme talonnent les plus diplômés (25,4), il semblerait qu'après l'obtention d'un premier diplôme, on serait gagnant à ne pas s'arrêter en si bon chemin. <br>
+        Toutefois messieurs, sachez que votre alter égo féminin s'en sort beaucoup mieux que vous dans sa poursuite des études (24,3 d'IMC pour un Bac Général - 22,6 pour un 2ème/ 3ème cycle, Grandes Ecoles).  
+        </b></p>
+
+        <br>
+        <br>
+      </div>
+      </div>  
 
     <div class="container-fluid bg-2 text-center">
+    <img src="images/balance.png" width="60">
     <h1>Fruits et légumes vs fast food</h1>
-    <div id="container2"> </div>     
+       
     </div>
+     <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
 
+          <div id="container2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+          <script type="text/javascript">
+              $(function () {
+
+              $(document).ready(function () {
+          
+                  $('#container2').highcharts({
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: null,
+                          plotShadow: false,
+                          type: 'pie'
+                      },
+                      title: {
+                          text: 'Fréquence de consommation de fruits et légumes'
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              allowPointSelect: true,
+                              cursor: 'pointer',
+                              dataLabels: {
+                                  enabled: false
+                              },
+                              showInLegend: true
+                          }
+                      },
+                      colors: ['#52AB8D','#41ECB3','#498C83'],
+                      series: [{
+                          name: 'Hommes',
+                          colorByPoint: true,
+                          data: [{
+                              name: '1 fois/jour au moins',
+                              y: 28.21
+                          }, {
+                              name: 'Entre 1 et 3 fois/jour',
+                              y: 49.62,
+                              sliced: true,
+                              selected: true
+                          }, {
+                              name: '+ de 3 fois/jour',
+                              y: 22.16
+                       
+                          }]
+                      }]
+                  });
+              });
+          });
+          </script>
+        </div>
+
+ <div id="container3" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+  <script type="text/javascript">
+          $(function () {
+
+    $(document).ready(function () {
+    
+        // Build the chart
+        $('#container3').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Fréquence de consommation de Fast Food'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+           colors: ['#F0580D','#FDC541','#EC9141'],
+            series: [{
+                name: 'Hommes',
+                colorByPoint: true,
+                data: [{
+                    name: 'Moins de 1 fois/mois ',
+                    y: 78.49
+                }, {
+                    name: 'Entre 1 et 3 fois/mois',
+                    y: 16.75,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: '1 fois/mois',
+                    y: 8.35
+             
+                }]
+            }]
+        });
+    });
+});
+
+
+  </script>
+  </div>
+
+<<<<<<< HEAD
        <div class="container-fluid bg-3 text-center">
+=======
+    <div class="container-fluid bg-3 text-center">
+    <img src="images/balance.png" width="60">
+>>>>>>> origin/gh-pages
     <h1>En couple, célibataire ? </h1>
     </div>
       <div>
@@ -234,14 +379,16 @@
 
 
     <div class="container-fluid bg-4 text-center">
+    <img src="images/balance.png" width="60">
     <h1>Cigarettes et Sport : bon ménage ?</h1>
      
     <h3><strong>Les Fumeurs ont un IMC plus faible</strong></h3>  
     </div>
 
     <div class="row" >
+    <div class="container-fluid text-center">
      <!--<div id="fumeur" style="min-width: 100px; max-width: 100px; height: 50px; margin: 0 auto"></div>-->
-      <div class="col-md-1" >
+      <div class="col-md-6" >
         
          <img src="images/cigarette.png" width="150" height="150" />  
 
@@ -251,7 +398,7 @@
 
        </div>
                           
-      <div class="col-md-2" >
+      <div class="col-md-6" >
               <div class="logo"><img src="images/cigarettenon.png" width="150" height="160" />  </div>
               <p>a voir quoi mettre. IMC de 26.95 </p>
 
@@ -332,6 +479,7 @@
       
 
      <div class="container-fluid bg-6 text-center">
+
      <h3><strong>IMC : fumeurs vs non fumeurs</strong></h3>  
 
     <div class="row" >
@@ -349,11 +497,70 @@
           
 
 
-    <div class="container-fluid bg-7 text-center">
+     <div class="container-fluid bg-7 text-center">
+     <img src="images/balance.png" width="60">
     <h1>Plutôt bien cuit ou saignant ?</h1>
-    <div id="container7"> </div>     
-    </div>
+    <br>
+    <br>
 
+          <h2>Comment est la cuisson du steack des Hommes de 50-64 ans en France ? </h2>
+          <h3>Vers le rouge la région est majoritairement saignante tandis que vers le jaune, elle est cuite.</h3>
+    <br> 
+    <br>
+      <div>
+        <div id="map">
+
+      <!-- include cartodb.js library -->
+      <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+      <script>
+        function main() {
+          cartodb.createVis('map', 'https://nicolasderemacle.cartodb.com/api/v2/viz/08c1a04e-f146-11e5-9762-0ea31932ec1d/viz.json', {
+              shareable: false,
+              title: false,
+              description: false,
+              search: false,
+              tiles_loader: false,
+              center_lat: 46.611211616759554 ,
+              center_lon: 1.8164066970348358,
+              zoom: 6,
+              gmaps_style:true,
+              
+              fullscreen:false,
+              shareable:true
+          })
+          .done(function(vis, layers) {
+            // layer 0 is the base layer, layer 1 is cartodb layer
+            // setInteraction is disabled by default
+            layers[1].setInteraction(true);
+            layers[1].on('featureOver', function(e, latlng, pos, data) {
+              cartodb.log.log(e, latlng, pos, data);
+            });
+            // you can get the native map to work with it
+            var map = vis.getNativeMap();
+            // now, perform any operations you need
+            // map.setZoom(3);
+            // map.panTo([50.5, 30.5]);
+          })
+          .error(function(err) {
+            console.log(err);
+          });
+        }
+        window.onload = main;
+      </script>
+      </div>
+      <div class="row" style="justify-content: space-around;display:flex;">
+        <div class="col-md-7">
+        <p style="text-justify: distribute-all-lines;"><b> Les hommes du Sud de la France ont une préférence pour un steack saignant. Plus proche des élevages, ils font confiance aux éleveurs et à la qualité de la viande. À l'inverse, les Hommes d'Ile-de-France tendent à faire bien cuire leur steack. Ainsi la proximité avec le lieu d'élevage influe sur la couleur de l'assiette !
+        </b></p> 
+        <br>
+        <p style="text-justify: distribute-all-lines;">  <b> Les hommes de 50-64 ans du Pays de la Loire ont l'IMC le plus élevè. Avec 65% de cuit, la rillette est bien cuite ! </b> </p>
+
+        <br>
+        <br>
+      </div>
+      </div>
+</div>     
+</div>
           
 
                 

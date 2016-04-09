@@ -109,9 +109,18 @@ input.radio:checked ~ label {
 }
 /* radio focus */
 input.radio:focus ~ label:before {
-  box-shadow: 0 0 0 3px rgba(51, 77, 77, 0);
+  box-shadow: 0 0 0 3px rgba(51, 77, 77, 0.4);
 }
 /* Fin CSS checkbox stylisée */
+
+.Go {
+	width: 200px;
+	height: 43px;
+  	border-radius: 5px;
+  	border: 2px solid #F49831;
+  	color: #F49831;
+  	background-color: white;
+}
 </style>
 
   </head>
@@ -130,6 +139,7 @@ input.radio:focus ~ label:before {
 
 <div class="container-fluid bg-3 text-center">
 	<h3>Donne-moi ton poids (ou IMC?), je te dirai qui tu es !</h3>
+	<br>
 
 </div>
  
@@ -227,27 +237,27 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 
 <div style="display: flex; justify-content: center;align-items: center;">
   <div>
-  <input type="radio" name="radio" id="A1" class="radio" checked/>
+  <input type="radio" name="radio" id="radio1" class="radio"/>
   <label class="label1" for="radio1" style="font-size: 0.8em;">18-24 ans</label>
   </div>
 
   <div>
-  <input type="radio" name="radio" id="A2" class="radio"/>
+  <input type="radio" name="radio" id="radio2" class="radio"/>
   <label class="label1" for="radio2" style="font-size: 0.8em;">25-34 ans</label>
   </div>
 
   <div> 
-  <input type="radio" name="radio" id="A3" class="radio"/>
+  <input type="radio" name="radio" id="radio3" class="radio"/>
   <label class="label1" for="radio3" style="font-size: 0.8em;">35-49 ans</label>
   </div>
 
   <div> 
-  <input type="radio" name="radio" id="A4" class="radio"/>
+  <input type="radio" name="radio" id="radio4" class="radio"/>
   <label class="label1" for="radio4" style="font-size: 0.8em;">50-64 ans</label>
   </div>
    
   <div> 
-  <input type="radio" name="radio" id="A5" class="radio"/>
+  <input type="radio" name="radio" id="radio5" class="radio"/>
   <label class="label1" for="radio5" style="font-size: 0.8em;">65 ans et +</label>
   </div>
 </div>
@@ -257,8 +267,9 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
 
 <br>
    
-<button onclick="myFunction()" class="btn btn-primary btn-block">Go !</button>
-   
+<button onclick="myFunction()" class='Go'>Go !</button>
+  
+ <br> 
 
 
   <script>
@@ -278,7 +289,7 @@ function myFunction() {
     }
 }
 </script>
-
+ <br>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

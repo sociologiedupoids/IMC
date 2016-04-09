@@ -216,7 +216,11 @@
     <script src="js/highcharts.js"></script>
     <script src="js/exporting.js"></script>
 
-          <div id="container2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+      <div style="display: flex; justify-content: center;align-items: center;margin-left:0px;">
+
+      <div class="graphes_fruits">          
+
+          <div id="container2" style="width: 500px; height: 400px;"></div>
 
 
           <script type="text/javascript">
@@ -232,7 +236,7 @@
                           type: 'pie'
                       },
                       title: {
-                          text: 'Fréquence de consommation de fruits et légumes'
+                          text: 'Fréquence de consommation de <br> fruits et légumes'
                       },
                       tooltip: {
                           pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -269,9 +273,13 @@
               });
           });
           </script>
+        
         </div>
 
- <div id="container3" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+         <div class="graphes_fruits">
+
+ <div id="container3" style="width: 500px; height: 400px;"></div>
   <script type="text/javascript">
           $(function () {
 
@@ -286,7 +294,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Fréquence de consommation de Fast Food'
+                text: 'Fréquence de consommation <br> de Fast Food'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -325,7 +333,11 @@
 
 
    </script>
+
   </div>
+  </div>
+  
+
   <br>
 <div class="container-fluid text-center">
   <h2>Stop aux idées reçues ! </h2>

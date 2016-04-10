@@ -180,9 +180,11 @@ input.radio:focus ~ label:before {
 
 <div class="row">
 
-<div style="display: flex;align-items: center; text-align: justify;">
+<div style="display: flex; text-align: justify;">
  
-<div class='IMC_block' style="width:700px; margin-left: 70px; height:355px;background-color:#FFFFFF;">    
+<div class='IMC_block' style="width:540px; margin-left: 70px; height:435px;background-color:#FFFFFF;"> 
+
+<div style="margin-left: 20px; margin-right: 20px;">   
 <h3><b>Vos habitudes alimentaires et votre train de vie vous inquiètent ?</b></h3>    
 
 <p>Voyez par vous-même et comparez votre IMC avec vos pairs. Vos 45kg ou 95kg ne pèsent pas lourd face à l’Indice de Masse Corporelle. Etes-vous plutôt poids lourd, poids plume ou poids coq ? Cette étude vous dit tout.
@@ -193,44 +195,50 @@ De l’influence de votre consommation de fruits et légumes sur l’IMC à cell
 <br>
 Voici la preuve, Mesdames, que les longues études vous réussissent mieux.
 Quant à vous Messieurs, rassurez vous, ce n’est pas votre consommation excessive de fast food qui influe sur votre bedaine..</p>
+</div>
 
 </div>
 
-<div class='IMC_block' style="width:490px; margin-left: 70px; height:155px;background-color:#FFFFFF;">
+<div class='IMC_block' style="width:540px; margin-left: 70px; height:500px;background-color:#FFFFFF;">
 
+<div style="margin-left: 20px; margin-right: 20px;">
           <h3><b>L'IMC, qu'est-ce que c'est?</b></h3>
-          <p>L'indice de masse corporelle (IMC) est une grandeur qui permet <br>d’estimer la corpulence d’une personne. Pour une explication <br>plus sérieuse rendez-vous <a href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle">ici</a>.
+          <p>L'indice de masse corporelle (IMC) est une grandeur qui permet d’estimer la corpulence d’une personne.<br> Pour une explication plus sérieuse rendez-vous <a href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle">ici</a>.
           
           </p>
      
+          <br>
+</div> 
 
-  
+<div style="background-color: rgb(90,175,164,1); height:30px;">
+</div>
+<div style="margin-left: 20px; margin-right: 20px;">
           <h3><b>Calculez votre IMC :</b> </h3>
 
 	   <form method="POST" id="formulaire">
 	   
      <div style="display: flex;align-items: center; text-align: justify; margin-top: 20px;">
 	   
-     <div style="width:190px;">
+     <div style="width:210px;">
     <div style="text-align: center;"><img src="images/poids orange.png" width="43"> <label for="ex1">Poids</label> </div>
-	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Poids" value="60" size="10" onblur="calculIMC()">
+	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Poids" placeholder="Entrez votre poids (ex : 75)" size="10" onblur="calculIMC()">
 		</div>
 		 
-     <div style="width:190px; margin-left: 20px;">
+     <div style="width:210px; margin-left: 20px;">
     <div style="text-align: center;"><img src="images/metre picto.png" width="70"> <label for="ex1">Taille</label></div>
-	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Taille" value="1.70" size="10" onblur="calculIMC()">
+	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Taille" placeholder="Entrez votre taille (ex : 1.70)" size="10" onblur="calculIMC()">
 		</div>
 		
     </div>
 		
 		
-    <div style="width:190px; margin-top: 20px;">
+    <div style="width:210px; margin-top: 20px;">
     <div style="text-align: center;"><label for="inputdefault">IMC</label></div>
 	  	<input class="form-control" id="inputdefault" style="color:black;" type="text"  name="IMC" size="10">
 		</div>
         
     </form>
-</div>
+
         <script>
         function calculIMC()
         {
@@ -247,14 +255,14 @@ Quant à vous Messieurs, rassurez vous, ce n’est pas votre consommation excess
         }
         }
         </script>
-
+</div>
+</div>
 </div>
 <br>
   </div>
 </div>
 
 <!-- 2ème Container -->
-<br>
 <br>
  <div class="container-fluid bg-3 text-center">
  <h3>Vous êtes prêts? C'est parti !</h3>

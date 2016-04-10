@@ -8,9 +8,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<link rel="icon" href="images/icone.ico">
+    <link rel="shortcut icon" href="images/icone.ico" />
 
-    <title>DataViz</title>
+    <title>Sociologie du poids</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,19 +35,49 @@
     body { 
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
-    background-color: #009999; /* Bleu canaaard */
-    color: #334d4d;
-    }
+    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("images/Diapositive1.PNG") ;
+    background-repeat: repeat;
+    background-position: 50% 50%;
+ 
+
+    
+       }
      p {font-size: 16px;}
-    .margin {margin-bottom: 45px;}
+
+
+    .margin {margin-bottom: 155px;}
+
+
     .bg-1 { 
-      background-color: #009999; /* Bleu canard clair*/
-      color: #334d4d; /* Gris foncé*/
+ 
+      background-image: "images/Diapositive1.PNG";
+      background-color: #5AAFA4; 
+      margin: 12px 12px 12px 12px;
+      padding: 50px 0px 20px 20px; /* Note 0px padding right */
+      list-style: none 
     }
     .bg-2 { 
-      background-color: #94b8b8; /* Gris bleu */
-      color: #334d4d ; /* Gris foncé*/
+      /* Gris bleu #046380*/
+     /* Gris foncé*/
+      margin: 30px 40px 40px 20px;
+      padding: 12px 0px 12px 12px; /* Note 0px padding right */
+      list-style: none 
+     }
+    .bg-3 { 
+      background-color: #5AAFA4; /* Gris bleu */
+      color: #FFFFFF; /* Gris foncé*/
+     
+      margin: 40px 60px 50px 50px;
+      padding: 12px 0px 12px 12px; /* Note 0px padding right */
+      list-style: none 
   }
+  .marge {
+margin-left: +20px;
+}
+
+
+
+  
 /* Debut CSS checkbox stylisée */
 .label1 {
   width: 100px;
@@ -103,9 +134,24 @@ input.radio:checked ~ label {
 }
 /* radio focus */
 input.radio:focus ~ label:before {
-  box-shadow: 0 0 0 3px rgba(51, 77, 77, 0);
+  box-shadow: 0 0 0 3px rgba(51, 77, 77, 0.4);
 }
 /* Fin CSS checkbox stylisée */
+
+.Go {
+	width: 200px;
+	height: 43px;
+  	border-radius: 5px;
+  	border: 2px solid #F49831;
+  	color: #F49831;
+  	background-color: white;
+
+
+}
+
+
+
+
 </style>
 
   </head>
@@ -115,49 +161,80 @@ input.radio:focus ~ label:before {
 
 <!-- First Container -->
 
-  <body>
+  <body >
 
-  <div class="container-fluid bg-1 text-center">
- <h1>Projet Dataviz</h1>
-</div>
+  
 
-<div class="container-fluid bg-1 text-center">
-	<h3>Description du projet</h3>
-<p>blablabla</p>
+  <div class="container-fluid bg-3 text-center" style="font-size: 40px;">
+  <img src="images/balance.png" width="70">
+ <h1><font size="22"> <b>La sociologie du poids</b></font></h1> 
+
+	<h2>Donne-moi ton IMC, je te dirai qui tu es !</h2>
+	<br>
+  <p> <i> </i>  </p>
+
 </div>
  
       <!-- ESSAI QUESTIONS -->
+
+
 <div class="row">
-        <div class="col-md-7">
-<h3>L'IMC, qu'est-ce que c'est?</h3>
-<p>L'indice de masse corporelle (IMC) est une grandeur qui permet d’estimer la corpulence d’une personne. Elle a été inventée par Adolphe Quetelet, scientifique belge fondateur de la statistique moderne — cet indice est aussi appelé indice de Quetelet.
 
-Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait été conçu au départ pour les adultes de 18 à 65 ans, de nouveaux diagrammes de croissance ont vu le jour au cours des dernières décennies pour les enfants de 0 à 18 ans. Dans les deux cas, il constitue une indication et intervient dans le calcul de l’IMG.</p>
-  </div>
+<div style="display: flex; text-align: justify;">
+ 
+<div class='IMC_block' style="width:540px; margin-left: 70px;  height:390px;"> 
 
-          <div class="col-md-4">
-          <h3>Calculez votre IMC : </h3>
+<div style="margin-left: 20px; margin-right: 20px; height: 380px; background-color:#FFFFFF;">   
+<h3><b>Vos habitudes alimentaires et votre train de vie vous inquiètent ?</b></h3>    
 
-	 <form method="POST" id="formulaire">
-	 <div class="form-group">
-	 <div class="col-xs-6">
-    <img src="images/poids orange.png" width="43"> <label for="ex1">Poids</label> 
-	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Poids" value="60" size="10" onblur="calculIMC()">
+<p>Voyez par vous-même et <b>comparez votre IMC avec vos pairs</b>. Vos 45kg ou 95kg ne pèsent pas lourd face à l’Indice de Masse Corporelle. Etes-vous plutôt poids lourd, poids plume ou poids coq ? Cette étude vous dit <b>tout</b>.
+
+<br>
+De l’influence de votre consommation de <b>fruits et légumes</b> sur l’IMC à celle de votre <b>diplôme</b>, de votre <b>situation maritale</b> ou encore celle de la <b>cuisson de votre viande</b>, vous saurez tout sur les habitudes de vos semblables : homme, femme, jeunes, moins jeunes,… 
+
+<br>
+Voici la preuve, Mesdames, que <b>les longues études</b> vous réussissent mieux.
+Quant à vous Messieurs, rassurez vous, ce n’est pas votre consommation excessive de <b>fast food</b> qui influe sur votre bedaine..</p>
+</div>
+
+</div>
+
+<div class='IMC_block' style="width:540px; margin-left: 70px; height:400px;">
+
+<div style="margin-left: 20px; margin-right: 20px; height: 130px; background-color:#FFFFFF;  text-align: justify;">
+          <h3><b>L'IMC, qu'est-ce que c'est?</b></h3>
+          <p>L'indice de masse corporelle (IMC) est une grandeur qui permet d’estimer la corpulence d’une personne.<br> Pour une explication plus sérieuse rendez-vous <a href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle">ici</a>.       
+          </p>
+
+</div> 
+
+<div style="margin-left: 20px; margin-right: 20px;">
+          <h3><b>Calculez votre IMC :</b> </h3>
+
+	   <form method="POST" id="formulaire">
+	   
+     <div style="display: flex;align-items: center; text-align: justify; margin-top: 20px;">
+	   
+     <div style="width:210px;">
+    <div style="text-align: center;"><img src="images/poids orange.png" width="43"> <label for="ex1">Poids</label> </div>
+	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Poids" placeholder="Entrez votre poids (ex : 75)" size="10" onblur="calculIMC()">
 		</div>
-		 <div class="col-xs-6">
-    <img src="images/metre picto.png" width="70"> <label for="ex1">Taille</label>
-	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Taille" value="1.70" size="10" onblur="calculIMC()">
+		 
+     <div style="width:210px; margin-left: 20px;">
+    <div style="text-align: center;"><img src="images/metre picto.png" width="70"> <label for="ex1">Taille</label></div>
+	  	<input class="form-control" id="ex1" style="color:black;" type="text"  name="Taille" placeholder="Entrez votre taille (ex : 1.70)" size="10" onblur="calculIMC()">
 		</div>
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		 <div class="form-group">
-     <label for="inputdefault">IMC</label>
+		
+    </div>
+		
+		
+    <div style="width:210px; margin-top: 20px;">
+    <div style="text-align: center;"><label for="inputdefault">IMC</label></div>
 	  	<input class="form-control" id="inputdefault" style="color:black;" type="text"  name="IMC" size="10">
 		</div>
-        </form>
+        
+    </form>
+
         <script>
         function calculIMC()
         {
@@ -175,36 +252,37 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
         }
         </script>
 </div>
-    </div>
-    </div>
-
-<!-- 2ème Container -->
-  <div class="container-fluid bg-2 text-center">
-  <h3>Vous êtes prêts? C'est parti !</h3>
+</div>
+</div>
   </div>
+<!-- 2ème Container -->
+ <div class="container-fluid bg-3 text-center">
+ <h3>Vous êtes prêts? C'est parti !</h3>
+</div>
+ 
+ <div class="container-fluid bg-2 text-center">
+    <h3><b>Etes-vous :</b></h3>
+    
+    <div class="checkbox" style="display: flex; justify-content: center;align-items: center;margin-left:0px;">
+    <div class="sexe" style="width:300px;">
+  <img src="images/pic femme.png" width="62" height="126" >  <input type="radio" name="optradio" id="F"><label class="checkbox-inline" > <b>Une femme</b></label>
+    </div>
 
+    <div class"sexe" style="width:300px;">
+  <img src="images/pic homme.png" width="65"> <input type="radio" name="optradio" id="H"> <label class="checkbox-inline" ><b>Un homme</b></label>
+    </div>
+    
+	  </div>
 
   <div class="container-fluid bg-2 text-center">
-    <h3>Etes-vous :</h3>
-    <div class="checkbox">
-	<img src="images/pic homme.png" width="35"> <label class="checkbox-inline"> <input type="checkbox" name="optradio" id="H">Un homme</label>
-	<img src="images/pic femme.png" width="32" height="66">  <label class="checkbox-inline"> <input type="checkbox" name="optradio"id="F">Une femme</label>
-	</div>
- </div>
-
-  
-
-  <div class="container-fluid bg-2 text-center">
-  <h3>Votre âge : </h3>
-        <div>
+  <h3><b>Votre âge :</b> </h3>
   <img src="images/anniversaire picto.png" width="60"/> 
-	</div>
-
+	
 <!-- Debut checkbox stylisée -->
 
 <div style="display: flex; justify-content: center;align-items: center;">
   <div>
-  <input type="radio" name="radio" id="radio1" class="radio" checked/>
+  <input type="radio" name="radio" id="radio1" class="radio"/>
   <label class="label1" for="radio1" style="font-size: 0.8em;">18-24 ans</label>
   </div>
 
@@ -228,52 +306,92 @@ Cet indice se calcule en fonction de la taille et de la masse. Bien qu’il ait 
   <label class="label1" for="radio5" style="font-size: 0.8em;">65 ans et +</label>
   </div>
 </div>
+</div>
+
 
 <!-- Fin checkbox stylisée -->
 
-
-  <div class="container-fluid bg-2 text-center">
-      <button type="button" class="btn btn-default" id="A11">18-24</button>      
-      <button type="button" class="btn btn-default">25-34</button>
-      <button type="button" class="btn btn-default">35-49</button>      
-      <button type="button" class="btn btn-default">50-64</button>
-      <button type="button" class="btn btn-default">65 et +</button>
-    </div>
    
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-default active"><input type="radio"  id="A111" autocomplete="off" checked>18-24 ans</label>
-  <label class="btn btn-default"><input type="radio"autocomplete="off">25-34 ans</label>  
-  <label class="btn btn-default"><input type="radio" autocomplete="off">35-49 ans</label>
-  <label class="btn btn-default"><input type="radio" autocomplete="off">50-64 ans</label> 
-  <label class="btn btn-default"><input type="radio" autocomplete="off">65 ans et +</label>
-</div>
-
-   <br>
-   
-<button onclick="myFunction()" class="btn btn-primary btn-block">Go !</button>
-   
+<button onclick="myFunction()" class='Go'>Go !</button>
+  
+ <br> 
 
 
   <script>
 function myFunction() {
     var H = document.getElementById("H");
     var F = document.getElementById("F");
-    var A1 = document.getElementById("A1");
-    var A2 = document.getElementById("A2");
-    var A3 = document.getElementById("A3");
-    var A4 = document.getElementById("A4");
-    var A5 = document.getElementById("A5");
-    var A11 = document.getElementById("A11");
-    var A111 = document.getElementById("A111");
-    if (H.checked == true && A111.checked == true) {
+    var A1 = document.getElementById("radio1");
+    var A2 = document.getElementById("radio2");
+    var A3 = document.getElementById("radio3");
+    var A4 = document.getElementById("radio4");
+    var A5 = document.getElementById("radio5");
+
+
+    if (H.checked == true && A1.checked == true) {
     	window.open ('Hommes_A1.html','_self',false)
-    } else if (F.checked == true && A11.active == true) {
-    	window.open ('Femmes_A2.html','_self',false)
-    }
+    } else if (H.checked == true && A2.checked == true) {
+    	window.open ('Hommes_A2.html','_self',false)
+    } else if (H.checked == true && A3.checked == true) {
+      window.open ('Hommes_A3.html','_self',false)
+    } else if (H.checked == true && A4.checked == true) {
+      window.open ('Hommes_A4.html','_self',false)
+    } else if (H.checked == true && A5.checked == true) {
+      window.open ('Hommes_A5.html','_self',false)
+    } else if (F.checked == true && A1.checked == true) {
+      window.open ('Femmes_A1.html','_self',false)
+    } else if (F.checked == true && A2.checked == true) {
+      window.open ('Femmes_A2.html','_self',false)
+    } else if (F.checked == true && A3.checked == true) {
+      window.open ('Femmes_A3.html','_self',false)
+    } else if (F.checked == true && A4.checked == true) {
+      window.open ('Femmes_A4.html','_self',false)
+    } else if (F.checked == true && A5.checked == true) {
+      window.open ('Femmes_A5.html','_self',false)
+    } 
 }
 </script>
+ <br>
+ 
 
-    <!-- Bootstrap core JavaScript
+
+<div class="container-fluid bg-4 text-center" style="justify-content: space-between; display: flex; margin: 30px 15px 20px 15px;padding: 12px 0px 12px 12px;background-color: #5AAFA4; ">
+      <div style="margin-left: 0px;margin-right: 0px"> 
+      <br>
+      <img src="images/logo.png" width="180">
+      </div>
+      <div style="margin-left: +5px;margin-right: +5px">
+
+
+        <h3>  <font color="white"> <u>Qui sommes nous ?  </u></font> </h3>
+      
+        <p style="text-justify: distribute-all-lines;text-align: justify;"> <font color="white" > Nous sommes 4 étudiants de l'ENSAE ParisTech et nous avons réalisé ce site web dans le cadre du cours de Data Visualization encadré par Kilian Bazin. Cette étude a été réalisée à l'aide de la base de données "Données de consommations et habitudes alimentaires de l'étude INCA 2" délivrée par Data-Gouv.</font></p>
+        </div>
+        <div style="margin-left: +5px;margin-right: +5px; width: 1010px">
+        <h3> <font color="white"> <u> Nous contacter :</u> </font> </h3>
+        <font color="white">
+        
+        <p><a href="mailto:aniorte.marie@gmail.com" style="color: white;"> Marie Aniorte</a> </p>  
+       <p> <a href="mailto:nicolas.de.remacle@gmail.com" style="color: white;"> Nicolas de Rémacle</a></p>
+        <p><a href="mailto:pierre.pitteu@gmail.com" style="color: white;"> Pierre Pitteu</a></p>
+        <p><a href="mailto:margaux.rey13@gmail.com" style="color: white;"> Margaux Rey</a></p>
+        </font>
+        </div>
+        <div style="margin-left: +20px;margin-right: +20px;width: 1010px">
+        <h3> <font color="white"> <u>Sources :</u></font> </h3>
+        <p> 
+        <p><a href="https://thenounproject.com/" style="color: white;"> Noun Project </a></p>
+        <p><a href="https://cartodb.com/" style="color: white;">CartoDB </a></p>
+        <p><a href="https://www.data.gouv.fr/fr/" style="color: white;">Data-Gouv </a></p>
+        <p><a href="http://www.highcharts.com/" style="color: white;">Highcharts</a></p>
+       
+        </div>
+
+   
+</div>
+</div>
+
+   <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

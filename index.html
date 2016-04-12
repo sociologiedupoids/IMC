@@ -256,11 +256,11 @@ Quant à vous Messieurs, rassurez vous, ce n’est pas votre consommation excess
         var taille=parseFloat(document.getElementById("formulaire").elements["Taille"].value);
         if (!isNaN (poids)&& !isNaN(taille))
         {
-        var IMC= Math.round(document.getElementById("formulaire").elements["Poids"].value / (document.getElementById("formulaire").elements["Taille"].value * document.getElementById("formulaire").elements["Taille"].value));
-        document.getElementById("formulaire").elements["IMC"].value=IMC;
+        //var IMC= Math.round(document.getElementById("formulaire").elements["Poids"].value / (document.getElementById("formulaire").elements["Taille"].value * document.getElementById("formulaire").elements["Taille"].value));
+        document.getElementById("formulaire").elements["IMC"].value=Math.round(document.getElementById("formulaire").elements["Poids"].value / (document.getElementById("formulaire").elements["Taille"].value * document.getElementById("formulaire").elements["Taille"].value));
         }else
         {
-        alert("Vous devez entrer un chiffre, en utilisant le . comme séparateur");
+        //alert("Vous devez entrer un chiffre, en utilisant le . comme séparateur");
         }
         }
         </script>
